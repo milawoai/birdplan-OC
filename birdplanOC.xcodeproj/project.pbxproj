@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
+		FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
+		FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
+		FC07EBCD1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
+		FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
+		FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
+		FC2889F31EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */; };
+		FC2889F41EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */; };
+		FC2889F51EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */; };
 		FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F4C1EA0AB4B0061F8A8 /* main.m */; };
 		FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F4F1EA0AB4B0061F8A8 /* AppDelegate.m */; };
 		FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F521EA0AB4B0061F8A8 /* ViewController.m */; };
@@ -15,6 +24,9 @@
 		FCD70F5B1EA0AB4B0061F8A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD70F591EA0AB4B0061F8A8 /* LaunchScreen.storyboard */; };
 		FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F651EA0AB4C0061F8A8 /* birdplanOCTests.m */; };
 		FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */; };
+		FCE2ED6E1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHelpers.m */; };
+		FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHelpers.m */; };
+		FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +47,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC07EBC51EB9F5D400EFF9C7 /* BDPMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainTabViewController.h; path = MainContent/BDPMainTabViewController.h; sourceTree = "<group>"; };
+		FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainTabViewController.m; path = MainContent/BDPMainTabViewController.m; sourceTree = "<group>"; };
+		FC07EBCB1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainCollectionViewCell.h; path = MainContent/BDPMainCollectionViewCell.h; sourceTree = "<group>"; };
+		FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainCollectionViewCell.m; path = MainContent/BDPMainCollectionViewCell.m; sourceTree = "<group>"; };
+		FC07EC141EB9FF2000EFF9C7 /* BDPUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPUIConstants.h; sourceTree = "<group>"; };
+		FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = pch/PrefixHeader.pch; sourceTree = "<group>"; };
+		FC2889F11EA79CE60061F825 /* BDPMainCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainCollectionViewController.h; path = MainContent/BDPMainCollectionViewController.h; sourceTree = "<group>"; };
+		FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainCollectionViewController.m; path = MainContent/BDPMainCollectionViewController.m; sourceTree = "<group>"; };
 		FCD70F481EA0AB4B0061F8A8 /* birdplanOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = birdplanOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD70F4C1EA0AB4B0061F8A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FCD70F4E1EA0AB4B0061F8A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +71,11 @@
 		FCD70F6C1EA0AB4C0061F8A8 /* birdplanOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = birdplanOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = birdplanOCUITests.m; sourceTree = "<group>"; };
 		FCD70F721EA0AB4C0061F8A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCE2ED6C1EF15CBF003BAC97 /* UIColor+BDPHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+BDPHelpers.h"; path = "category/UIColor+BDPHelpers.h"; sourceTree = "<group>"; };
+		FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BDPHelpers.m"; path = "category/UIColor+BDPHelpers.m"; sourceTree = "<group>"; };
+		FCE2ED711EF15E25003BAC97 /* BDPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPConstants.h; sourceTree = "<group>"; };
+		FCE2ED721EF15E3B003BAC97 /* BDPColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDPColorConstants.h; sourceTree = "<group>"; };
+		FCE2ED731EF15E9D003BAC97 /* BDPCategroy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPCategroy.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,9 +103,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC07EBCA1EB9F65B00EFF9C7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FC07EBCB1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.h */,
+				FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		FC07EC121EB9FEDD00EFF9C7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		FC07EC131EB9FEF100EFF9C7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FC07EC141EB9FF2000EFF9C7 /* BDPUIConstants.h */,
+				FCE2ED711EF15E25003BAC97 /* BDPConstants.h */,
+				FCE2ED721EF15E3B003BAC97 /* BDPColorConstants.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
+		FC2889F01EA79C6A0061F825 /* MainContent */ = {
+			isa = PBXGroup;
+			children = (
+				FC07EBC51EB9F5D400EFF9C7 /* BDPMainTabViewController.h */,
+				FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */,
+			);
+			name = MainContent;
+			sourceTree = "<group>";
+		};
 		FCD70F3F1EA0AB4B0061F8A8 = {
 			isa = PBXGroup;
 			children = (
+				FCE2ED741EF161E6003BAC97 /* UI */,
+				FCE2ED6B1EF15C8C003BAC97 /* categroy */,
+				FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */,
+				FC07EC131EB9FEF100EFF9C7 /* Constants */,
+				FC07EC121EB9FEDD00EFF9C7 /* Utils */,
+				FC2889F01EA79C6A0061F825 /* MainContent */,
 				FCD70F4A1EA0AB4B0061F8A8 /* birdplanOC */,
 				FCD70F641EA0AB4C0061F8A8 /* birdplanOCTests */,
 				FCD70F6F1EA0AB4C0061F8A8 /* birdplanOCUITests */,
@@ -138,6 +204,34 @@
 				FCD70F721EA0AB4C0061F8A8 /* Info.plist */,
 			);
 			path = birdplanOCUITests;
+			sourceTree = "<group>";
+		};
+		FCE2ED6B1EF15C8C003BAC97 /* categroy */ = {
+			isa = PBXGroup;
+			children = (
+				FCE2ED6C1EF15CBF003BAC97 /* UIColor+BDPHelpers.h */,
+				FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHelpers.m */,
+				FCE2ED731EF15E9D003BAC97 /* BDPCategroy.h */,
+			);
+			name = categroy;
+			sourceTree = "<group>";
+		};
+		FCE2ED741EF161E6003BAC97 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FCE2ED751EF161F8003BAC97 /* pureCode */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		FCE2ED751EF161F8003BAC97 /* pureCode */ = {
+			isa = PBXGroup;
+			children = (
+				FC07EBCA1EB9F65B00EFF9C7 /* Cell */,
+				FC2889F11EA79CE60061F825 /* BDPMainCollectionViewController.h */,
+				FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */,
+			);
+			name = pureCode;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,8 +370,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC07EBCD1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
+				FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */,
 				FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */,
+				FCE2ED6E1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
+				FC2889F31EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
 				FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +384,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
+				FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
+				FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
+				FC2889F41EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
+				FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
+				FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
+				FC2889F51EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +534,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48LYG8Q6YA;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/pch/PrefixHeader.pch";
 				INFOPLIST_FILE = birdplanOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanOC;
@@ -440,6 +549,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 48LYG8Q6YA;
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/pch/PrefixHeader.pch";
 				INFOPLIST_FILE = birdplanOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanOC;
@@ -516,6 +628,7 @@
 				FCD70F771EA0AB4C0061F8A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCD70F781EA0AB4C0061F8A8 /* Build configuration list for PBXNativeTarget "birdplanOCTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +637,7 @@
 				FCD70F7A1EA0AB4C0061F8A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FCD70F7B1EA0AB4C0061F8A8 /* Build configuration list for PBXNativeTarget "birdplanOCUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +646,7 @@
 				FCD70F7D1EA0AB4C0061F8A8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

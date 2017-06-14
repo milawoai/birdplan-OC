@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BDPMainCollectionViewController.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +15,26 @@
 
 @implementation AppDelegate
 
++ (UIWindow *)mainWindow {
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    return appDelegate.window;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    BDPMainCollectionViewController *mainController = [[BDPMainCollectionViewController alloc] init];
+    
+//    UIViewController *mainController = [[UIViewController alloc] init];
+//    UIWebView *webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.medlinker.com/h5/interlocution/index.html?med_channel=shuidi3"]]];
+//    mainController.view = webView;
+    
+    self.window.rootViewController = mainController;
+    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
