@@ -24,4 +24,6 @@ typedef NS_ENUM(NSInteger,BDPIndexOfMainTab) {
 
 - (UINavigationController *)currentNavController;
 
+@property(nonatomic, assign) BOOL tabBarHidden;
+
 @end

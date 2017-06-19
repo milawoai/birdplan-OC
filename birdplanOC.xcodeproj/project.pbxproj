@@ -34,6 +34,12 @@
 		FC4905DF1EF7960300F825AF /* UIView+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPHelper.m */; };
 		FC4905E01EF7960300F825AF /* UIView+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPHelper.m */; };
 		FC4905E11EF7960300F825AF /* UIView+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPHelper.m */; };
+		FC4905E61EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
+		FC4905E71EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
+		FC4905E81EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
+		FC4905E91EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
+		FC4905EA1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
+		FC4905EB1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
 		FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F4C1EA0AB4B0061F8A8 /* main.m */; };
 		FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F4F1EA0AB4B0061F8A8 /* AppDelegate.m */; };
 		FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F521EA0AB4B0061F8A8 /* ViewController.m */; };
@@ -91,6 +97,9 @@
 		FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPCodeHomePageViewController.m; path = MainContent/BDPCodeHomePageViewController.m; sourceTree = "<group>"; };
 		FC4905DD1EF7960300F825AF /* UIView+BDPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BDPHelper.h"; sourceTree = "<group>"; };
 		FC4905DE1EF7960300F825AF /* UIView+BDPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BDPHelper.m"; sourceTree = "<group>"; };
+		FC4905E31EF7C13100F825AF /* BDPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPTestViewController.h; path = page/BDPTestViewController.h; sourceTree = "<group>"; };
+		FC4905E41EF7C13100F825AF /* BDPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPTestViewController.m; path = page/BDPTestViewController.m; sourceTree = "<group>"; };
+		FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BDPTestViewController.xib; path = page/BDPTestViewController.xib; sourceTree = "<group>"; };
 		FCD70F481EA0AB4B0061F8A8 /* birdplanOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = birdplanOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD70F4C1EA0AB4B0061F8A8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FCD70F4E1EA0AB4B0061F8A8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -212,9 +221,20 @@
 			name = Bar;
 			sourceTree = "<group>";
 		};
+		FC4905E21EF7C0EC00F825AF /* Pages */ = {
+			isa = PBXGroup;
+			children = (
+				FC4905E31EF7C13100F825AF /* BDPTestViewController.h */,
+				FC4905E41EF7C13100F825AF /* BDPTestViewController.m */,
+				FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */,
+			);
+			name = Pages;
+			sourceTree = "<group>";
+		};
 		FCD70F3F1EA0AB4B0061F8A8 = {
 			isa = PBXGroup;
 			children = (
+				FC4905E21EF7C0EC00F825AF /* Pages */,
 				FCE2ED741EF161E6003BAC97 /* UI */,
 				FCE2ED6B1EF15C8C003BAC97 /* Categroy */,
 				FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */,
@@ -438,6 +458,7 @@
 				FCD70F5B1EA0AB4B0061F8A8 /* LaunchScreen.storyboard in Resources */,
 				FCD70F581EA0AB4B0061F8A8 /* Assets.xcassets in Resources */,
 				FCD70F561EA0AB4B0061F8A8 /* Main.storyboard in Resources */,
+				FC4905E91EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,6 +466,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4905EA1EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,6 +474,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4905EB1EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +629,7 @@
 				FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */,
 				FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */,
 				FCE2ED6E1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
+				FC4905E61EF7C13100F825AF /* BDPTestViewController.m in Sources */,
 				FC4905D01EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
 				FC4905CB1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
 				FC4905DF1EF7960300F825AF /* UIView+BDPHelper.m in Sources */,
@@ -624,6 +648,7 @@
 				FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
 				FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC2889F41EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
+				FC4905E71EF7C13100F825AF /* BDPTestViewController.m in Sources */,
 				FC4905CC1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
 				FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
@@ -641,6 +666,7 @@
 				FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
 				FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC2889F51EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
+				FC4905E81EF7C13100F825AF /* BDPTestViewController.m in Sources */,
 				FC4905CD1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
 				FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,

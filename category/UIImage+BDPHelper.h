@@ -10,7 +10,11 @@
 
 @interface UIImage (BDPHelper)
 
+// 生成纯色图片
 + (UIImage *)imageWithColor:(UIColor *)color;
 + (UIImage *)imageWithColor:(UIColor *)color havingSize:(CGSize)size;
+
+// resize图片
++ (UIImage *)image:(UIImage *)image resize:(CGSize)newsize;
 
 @end

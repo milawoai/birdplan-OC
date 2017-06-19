@@ -7,8 +7,11 @@
 //
 
 #import "BDPCodeHomePageViewController.h"
+#import "BDPTestViewController.h"
+
 #import "BDPMainCollectionViewCell.h"
 #import "UIView+BDPHelper.h"
+
 
 #define default_colNumber 3
 #define default_totalNumber 12
@@ -234,6 +237,9 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 // 选中某item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
+    [ctrl setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:ctrl animated:YES];
 //    if (_collectionInfos && _collectionInfos.count > 0) {
 //        SDHZShareCollectionInfo *info = _collectionInfos[indexPath.row];
 //        [self shareActionWithFlag:info.shareFlag];

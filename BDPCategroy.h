@@ -11,5 +11,6 @@
 
 #import "UIColor+BDPHelpers.h"
 #import "UIImage+BDPHelper.h"
+#import "UIView+BDPHelper.h"
 
 #endif /* BDPCategroy_h */

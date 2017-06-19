@@ -16,6 +16,7 @@
 #define kSpace                  5
 
 static NSString *contentCtrlKey = @"contentCtrlKey";
+static NSString *imageSizeKey = @"imageSizeKey";
 @interface UITabBar ()
 
 @property (nonatomic, weak) UITabBarController *contentCtrl;
@@ -32,6 +33,12 @@ static NSString *contentCtrlKey = @"contentCtrlKey";
 {
     return objc_getAssociatedObject(self, &contentCtrlKey);
 }
+
+-(void)setImageSize:(CGSize)imageSize
+{
+    objc_setAssociatedObject(self, &imageSizeKey, NSStringFromCGSize(imageSize), OBJC_ASSOCIATION_COPY_NONATOMIC);
+}
+
 
 +(void)load
 {
@@ -61,11 +68,20 @@ static NSString *contentCtrlKey = @"contentCtrlKey";
             continue;
         }
         
+        
+        
         UIView* tabBarImage, *tabBarLabel;
         for (UIView *tabBtnChildView in childView.subviews) {
             /** tabbar的图片*/
             if ([tabBtnChildView isKindOfClass:NSClassFromString(@"UITabBarSwappableImageView")]) {
                 tabBarImage = tabBtnChildView;
+                CGRect frame = tabBarImage.frame;
+                NSString *imgSizeStr = objc_getAssociatedObject(self, &imageSizeKey);
+                CGSize imgSize = CGSizeFromString(imgSizeStr);
+                if (imgSize.width > 0 && imgSize.height > 0) {
+                    frame.size = imgSize;
+                    tabBarImage.frame = frame;
+                }
             }
             
             /** tabbar的label*/
@@ -73,6 +89,8 @@ static NSString *contentCtrlKey = @"contentCtrlKey";
                 tabBarLabel = tabBtnChildView;
             }
         }
+        
+        
         
         /** tabbarbtn总的高度*/
         CGFloat oldHeight = CGRectGetHeight(tabBarLabel.bounds)+CGRectGetHeight(tabBarImage.bounds);
@@ -88,6 +106,9 @@ static NSString *contentCtrlKey = @"contentCtrlKey";
 
 -(UIView *)my_hitTest:(CGPoint)point withEvent:(UIEvent *)event
 {
+    if (self.hidden) {
+        return nil;
+    }
     UIView *result = [super hitTest:point withEvent:event];
     if (result) {
         return result;

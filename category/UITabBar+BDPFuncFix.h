@@ -10,4 +10,6 @@
 
 @interface UITabBar (BDPFuncFix)
 
+-(void)setContentCtrl:(UITabBarController *)contentCtrl;
+-(void)setImageSize:(CGSize)imageSize;
 @end
