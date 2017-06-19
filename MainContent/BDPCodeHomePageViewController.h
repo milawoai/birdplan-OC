@@ -1,14 +1,14 @@
 //
-//  BDPMainCollectionViewController.h
+//  BDPCodeHomePageViewController.h
 //  birdplanOC
 //
-//  Created by ygj on 2017/4/19.
+//  Created by ygj on 2017/6/19.
 //  Copyright © 2017年 zhoushijie. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface BDPMainCollectionViewController : UICollectionViewController
+@interface BDPCodeHomePageViewController : UIViewController
 
 - (instancetype)initWithColNumber: (NSInteger)colNumber;
 - (instancetype)initWithColNumber: (NSInteger)colNumber sectionInset: (UIEdgeInsets)edgeInsets;

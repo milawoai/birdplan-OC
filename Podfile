@@ -7,6 +7,8 @@ target 'birdplanOC' do
 
   # Pods for birdplanOC
   pod 'AFNetworking', '~> 3.1.0'
+  pod 'Masonry',
+  pod 'SDCycleScrollView','~> 1.64'
 
   target 'birdplanOCTests' do
     inherit! :search_paths

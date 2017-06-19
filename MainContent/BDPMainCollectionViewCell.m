@@ -7,7 +7,7 @@
 //
 
 #import "BDPMainCollectionViewCell.h"
-
+#import "UIView+BDPHelper.h"
 
 @interface BDPMainCollectionViewCell ()
 
@@ -17,16 +17,38 @@
 
 @implementation BDPMainCollectionViewCell
 
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        [self setUI];
+    }
+    return self;
+}
+
 -(instancetype)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
-    if (self) {
+    return self;
+}
+
+- (void)setUI {
+    self.backgroundColor = bdp_color_white;
+//    self.layer.borderColor=[UIColor darkGrayColor].CGColor;
+//    self.layer.borderWidth= 0.3;
+//    [self addBottomBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
+//    [self addTopBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
+//    [self addLeftBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
+//    [self addRightBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
+}
+
+- (void)setTitle:(NSString *)title {
+    if (!_entryTitle) {
         _entryTitle = [[UILabel alloc]initWithFrame:CGRectMake(7, 12 , SCREEN_WIDTH/3, SCREEN_WIDTH/3)];
         _entryTitle.numberOfLines = 0;
         _entryTitle.font = [UIFont systemFontOfSize:13];
         _entryTitle.textColor = [UIColor grayColor];
         [self.contentView addSubview:_entryTitle];
     }
-    return self;
+    _entryTitle.text = title;
 }
 
 @end

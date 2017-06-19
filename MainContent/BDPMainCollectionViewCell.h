@@ -10,4 +10,6 @@
 
 @interface BDPMainCollectionViewCell : UICollectionViewCell
 
+- (void)setUI;
+- (void)setTitle:(NSString *)title;
 @end

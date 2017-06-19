@@ -9,28 +9,74 @@
 #import "BDPMainCollectionViewController.h"
 #import "BDPMainCollectionViewCell.h"
 
+#define default_colNumber 3
+#define default_cellHeight 100
+// CGFloat top, CGFloat left, CGFloat bottom, CGFloat right
+#define default_top 0
+#define default_left 0
+#define default_bottom 0
+#define default_right 0
+#define default_edgeInsets UIEdgeInsetsMake(default_top, default_left, default_bottom, default_right)
+#define default_headerReferenceSize CGSizeMake(0, 40)
+#define default_footerReferenceSize CGSizeMake(0, 40)
+
+#define default_itemSpacing 0
+#define default_lineSpacing 0
+
 @interface BDPMainCollectionViewController ()
 
+@property (assign,nonatomic) NSInteger colNumber;
+@property (assign,nonatomic) NSInteger cellHeight;
+@property (assign,nonatomic) UIEdgeInsets edgeInsets;
 @end
 
 @implementation BDPMainCollectionViewController
 
-static NSString * const reuseIdentifier = @"collectionCell";
+static NSString * const reuseIdentifier_unuse = @"BDPMainCollectionViewCell_Unuse";
 
 - (instancetype)init {
+    return [self initWithColNumber:default_colNumber];
+}
+
+- (instancetype)initWithColNumber: (NSInteger)colNumber {
+    if (colNumber <= 0) {
+        colNumber = default_colNumber;
+    }
+    return [self initWithColNumber:colNumber sectionInset:default_edgeInsets];
+}
+
+- (instancetype)initWithColNumber: (NSInteger)colNumber sectionInset: (UIEdgeInsets)edgeInsets{
+    float blockWidth = (SCREEN_WIDTH - (edgeInsets.left + edgeInsets.right) * (colNumber - 1))/(colNumber);
+    self.colNumber = colNumber;
+    self.edgeInsets = edgeInsets;
+    return [self initWithCellWidth:blockWidth cellHeight:blockWidth];
+}
+
+- (instancetype)initWithCellWidth: (float)cellWidth cellHeight: (float)cellHeight {
+    if (cellHeight <= 0) {
+        cellHeight = default_cellHeight;
+    }
+    return [self initWithCellWidth: cellWidth cellHeight: cellHeight itemSpacing: default_itemSpacing lineSpacing: default_lineSpacing];
+}
+
+- (instancetype)initWithCellWidth: (float)cellWidth cellHeight: (float)cellHeight itemSpacing: (NSUInteger)itemSpacing lineSpacing: (NSUInteger)lineSpacing {
+    return [self initWithCellWidth: cellWidth cellHeight: cellHeight itemSpacing: itemSpacing lineSpacing: lineSpacing sectionInset: default_edgeInsets headerReferenceSize:default_headerReferenceSize footerReferenceSize:default_footerReferenceSize];
+}
+
+- (instancetype)initWithCellWidth: (float)cellWidth cellHeight: (float)cellHeight itemSpacing: (NSUInteger)itemSpacing lineSpacing: (NSUInteger)lineSpacing sectionInset: (UIEdgeInsets)edgeInsets headerReferenceSize: (CGSize)headerReferenceSize footerReferenceSize: (CGSize)footerReferenceSize {
     //创建一个流式布局对象
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
     //设置每个cell的大小
-    layout.itemSize = CGSizeMake(80, 180);
+
+    layout.itemSize = CGSizeMake(cellWidth, cellHeight);
     //设置每个cell间的最小水平间距
-    layout.minimumInteritemSpacing = 0;
+    layout.minimumInteritemSpacing = itemSpacing;
     //设置每个cell间的行间距
-    layout.minimumLineSpacing = 5;
+    layout.minimumLineSpacing = lineSpacing;
     //设置每一组距离四周的内边距
-    layout.sectionInset = UIEdgeInsetsMake(5, 0, 0, 0);
-    layout.headerReferenceSize = CGSizeMake(0, 40);
-    layout.footerReferenceSize = CGSizeMake(0, 40);
-    
+    layout.sectionInset = edgeInsets;
+    layout.headerReferenceSize = headerReferenceSize;
+    layout.footerReferenceSize = footerReferenceSize;
     //返回
     return [super initWithCollectionViewLayout:layout];
 }
@@ -43,11 +89,13 @@ static NSString * const reuseIdentifier = @"collectionCell";
     
     // Register cell classes
     [self.collectionView setBackgroundColor:bdp_color_white];
-    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+    [self.collectionView registerClass:[BDPMainCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier_unuse];
     //注册区头视图
-    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"BDPMainCollectionViewController_header"];
     //注册区尾视图
-    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
+    [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"BDPMainCollectionViewController_footer"];
+    
+//    [self.collectionView registerNib:[UINib nibWithNibName:@"BDPMainCollectionViewCell"bundle: [NSBundle mainBundle]] forCellWithReuseIdentifier:reuseIdentifier];
     
     // Do any additional setup after loading the view.
 }
@@ -56,6 +104,7 @@ static NSString * const reuseIdentifier = @"collectionCell";
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 /*
 #pragma mark - Navigation
@@ -77,15 +126,14 @@ static NSString * const reuseIdentifier = @"collectionCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
 #warning Incomplete implementation, return the number of items
-    return 5;
+    // return self.colNumber?self.colNumber:5;
+    return 18;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    BDPMainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
-    cell.backgroundColor = bdp_color_black;
-    
+    BDPMainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier_unuse forIndexPath:indexPath];
     // Configure the cell
-    
+    [cell setUI];
     return cell;
 }
 
@@ -127,5 +175,6 @@ static NSString * const reuseIdentifier = @"collectionCell";
 	
 }
 */
+
 
 @end

@@ -10,4 +10,6 @@
 #define BDPCategroy_h
 
 #import "UIColor+BDPHelpers.h"
+#import "UIImage+BDPHelper.h"
+
 #endif /* BDPCategroy_h */

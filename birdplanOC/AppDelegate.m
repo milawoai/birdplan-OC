@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BDPMainTabViewController.h"
 #import "BDPMainCollectionViewController.h"
 
 @interface AppDelegate ()
@@ -25,7 +26,7 @@
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    BDPMainCollectionViewController *mainController = [[BDPMainCollectionViewController alloc] init];
+    BDPMainTabViewController *mainController = [[BDPMainTabViewController alloc] init];
     
 //    UIViewController *mainController = [[UIViewController alloc] init];
 //    UIWebView *webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
