@@ -9,8 +9,12 @@
 #import "BDPCodeHomePageViewController.h"
 #import "BDPTestViewController.h"
 
+#import "SDCycleScrollView.h"
 #import "BDPMainCollectionViewCell.h"
+
 #import "UIView+BDPHelper.h"
+
+#import "BDPHomeLearnData.h"
 
 
 #define default_colNumber 3
@@ -30,23 +34,25 @@
 
 static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
-@interface BDPCodeHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout>
+@interface BDPCodeHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,SDCycleScrollViewDelegate>
 
 @property (assign,nonatomic) NSInteger colNumber;
 @property (assign,nonatomic) NSInteger cellWidth;
 @property (assign,nonatomic) NSInteger cellHeight;
 @property (assign,nonatomic) UIEdgeInsets edgeInsets;
 
-@property (assign,nonatomic) CGSize headerReferenceSize;
-@property (assign,nonatomic) CGSize footerReferenceSize;
+@property (assign, nonatomic) CGSize headerReferenceSize;
+@property (assign, nonatomic) CGSize footerReferenceSize;
 
-@property (assign,nonatomic) NSUInteger itemSpacing;
-@property (assign,nonatomic) NSUInteger lineSpacing;
+@property (assign, nonatomic) NSUInteger itemSpacing;
+@property (assign, nonatomic) NSUInteger lineSpacing;
 
 @property (strong, nonatomic)  UICollectionView *collectionView;
 @property (strong, nonatomic)  UICollectionViewFlowLayout *layout;
 
-@property (assign,nonatomic) NSInteger totallNumber;
+@property (assign, nonatomic) NSInteger totallNumber;
+
+@property (strong, nonatomic) NSMutableArray<BDPHomeLearnData*> *datas;
 @end
 
 @implementation BDPCodeHomePageViewController
@@ -119,21 +125,13 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setFakeData];
+    [self createCycleScrollView];
+    [self createCollectionView];
     // Do any additional setup after loading the view.
-    if (!_collectionView) {
-        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT) collectionViewLayout:self.layout];
-        [self.view addSubview:self.collectionView];
-
-        _collectionView.dataSource = self;
-        _collectionView.delegate = self;
-        _collectionView.backgroundColor = [UIColor whiteColor];
-        [self.collectionView registerClass:[BDPMainCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-        //注册区头视图
-        [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[NSString stringWithFormat:@"%@_header",reuseIdentifier]];
-        //注册区尾视图
-        [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:[NSString stringWithFormat:@"%@_footer",reuseIdentifier]];
-    }
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -149,6 +147,51 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     // Pass the selected object to the new view controller.
 }
 */
+
+// 本地加载 --- 创建不带标题的图片轮播器
+
+
+
+#pragma mark ---- UI init
+
+- (void) createCycleScrollView {
+    
+    NSArray *imagesURLStrings = @[
+                                  @"https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a4b3d7085dee3d6d2293d48b252b5910/0e2442a7d933c89524cd5cd4d51373f0830200ea.jpg",
+                                  @"https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/super/whfpf%3D425%2C260%2C50/sign=a41eb338dd33c895a62bcb3bb72e47c2/5fdf8db1cb134954a2192ccb524e9258d1094a1e.jpg",
+                                  @"http://c.hiphotos.baidu.com/image/w%3D400/sign=c2318ff84334970a4773112fa5c8d1c0/b7fd5266d0160924c1fae5ccd60735fae7cd340d.jpg"
+                                  ];
+    // 网络加载 --- 创建带标题的图片轮播器
+    SDCycleScrollView *cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 180) delegate:self placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    
+    cycleScrollView.pageControlAliment = SDCycleScrollViewPageContolAlimentRight;
+    // cycleScrollView2.titlesGroup = titles;
+    cycleScrollView.currentPageDotColor = [UIColor whiteColor]; // 自定义分页控件小圆标颜色
+    
+    //         --- 模拟加载延迟
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        cycleScrollView.imageURLStringsGroup = imagesURLStrings;
+    });
+
+    [self.view addSubview:cycleScrollView];
+}
+
+- (void) createCollectionView {
+    if (!_collectionView) {
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 180, SCREEN_WIDTH, SCREEN_HEIGHT - 180 - 64 - 48) collectionViewLayout:self.layout];
+        [self.view addSubview:self.collectionView];
+        
+        _collectionView.dataSource = self;
+        _collectionView.delegate = self;
+        _collectionView.backgroundColor = [UIColor whiteColor];
+        _collectionView.alwaysBounceVertical = YES;
+        [self.collectionView registerClass:[BDPMainCollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
+        //注册区头视图
+        [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:[NSString stringWithFormat:@"%@_header",reuseIdentifier]];
+        //注册区尾视图
+        [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:[NSString stringWithFormat:@"%@_footer",reuseIdentifier]];
+    }
+}
 
 #pragma mark ---- UICollectionViewDataSource
 
@@ -172,6 +215,10 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     // Configure the cell
     [cell addTopBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
     [cell addLeftBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
+    
+    if (_datas && _datas.count > indexPath.row) {
+        [cell setTitle:[[_datas objectAtIndex:indexPath.row] title]];
+    }
     
     if (indexPath.row % _colNumber == (_colNumber - 1) || indexPath.row == (_totallNumber-1)) {
         [cell addRightBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
@@ -245,4 +292,31 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 //        [self shareActionWithFlag:info.shareFlag];
 //    }
 }
+
+- (void)setFakeData {
+    if (!_datas) {
+        _datas = [NSMutableArray new];
+    }
+    
+    for (int i = 0; i<self.totallNumber; i++) {
+        BDPHomeLearnData *obj = [BDPHomeLearnData new];
+        obj.learnID = i;
+        obj.title = [NSString stringWithFormat:@"第%d课",i+1];
+        [_datas addObject:obj];
+    }
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
+    [ctrl setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+//- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index {
+//    NSLog(@">>>>>> 滚动到第%ld张图", (long)index);
+//}
+
 @end

@@ -10,12 +10,13 @@
 #import "BDPMainCollectionViewController.h"
 #import "BDPNavigationViewController.h"
 #import "BDPCodeHomePageViewController.h"
+#import "UITabBar+BDPFuncFix.h"
 //#import "UITabBar+BDPFuncFix.h"
 
 static dispatch_once_t onceToken;
 static BDPMainTabViewController *shared = nil;
 
-@interface BDPMainTabViewController ()
+@interface BDPMainTabViewController ()<UITabBarDelegate>
 
 @property (nonatomic, strong) BDPNavigationViewController *codeNavigationController;
 
@@ -26,6 +27,9 @@ static BDPMainTabViewController *shared = nil;
 @property (nonatomic, strong) BDPCodeHomePageViewController *xibCollectionViewController;
 
 @property(nonatomic, strong) UIButton *centerButton;
+@property(nonatomic, assign) NSUInteger centerButtonIndex;
+@property(nonatomic, strong) UIViewController *centerEmptyCtrl;
+@property(nonatomic, strong) UINavigationController *centerEmptyNav;
 @end
 
 @implementation BDPMainTabViewController
@@ -87,16 +91,6 @@ static BDPMainTabViewController *shared = nil;
     [self setSelectedIndex:index];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (BDPNavigationViewController *)codeNavigationController {
     if (_codeNavigationController) {
         return _codeNavigationController;
@@ -115,6 +109,7 @@ static BDPMainTabViewController *shared = nil;
     _codeNavigationController.tabBarItem.image = [tabbarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     _codeNavigationController.tabBarItem.selectedImage = selectedTabbarImage;
     _codeNavigationController.tabBarItem.title = @"code";
+    _codeNavigationController.tabBarItem.badgeValue = @"99";
     [_codeNavigationController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0]} forState:UIControlStateNormal];
     [_codeNavigationController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0]} forState:UIControlStateSelected];
     
@@ -175,6 +170,24 @@ static BDPMainTabViewController *shared = nil;
     if (self.centerButton) {
         return ;
     }
+    NSMutableArray<__kindof UIViewController *> *viewControllers = [self.viewControllers mutableCopy];
+    
+    if (viewControllers.count % 2 != 0) {
+        return;
+    } else {
+        if (!_centerEmptyCtrl) {
+            _centerEmptyCtrl = [[UIViewController alloc] init];
+            _centerEmptyCtrl.view.backgroundColor = [UIColor UIColorFromHex:0xffffff alpha:0.8];
+        }
+        if (!_centerEmptyNav) {
+            _centerEmptyNav = [[UINavigationController alloc] init];
+        }
+        _centerEmptyNav.tabBarItem.enabled = NO;
+        _centerEmptyNav.navigationBar.hidden = YES;
+        self.centerButtonIndex = viewControllers.count / 2;
+        [viewControllers insertObject:_centerEmptyNav atIndex:(viewControllers.count / 2)];
+        [self setViewControllers:viewControllers];
+    }
     CGRect tabbarFrame = self.tabBar.bounds;
     CGFloat offsetFromBottom = 10.0f;
     
@@ -202,7 +215,7 @@ static BDPMainTabViewController *shared = nil;
 
 - (void)buttonPressed:(id)sender
 {
-    [self setSelectedIndex:2];
+    [self setSelectedIndex:_centerButtonIndex];
     [self performSelector:@selector(doHighlight:) withObject:sender afterDelay:0];
 }
 
@@ -222,6 +235,13 @@ static BDPMainTabViewController *shared = nil;
 {
     self.centerButton.hidden = tabBarHidden;
     self.tabBar.hidden = tabBarHidden;
+}
+
+#pragma mark - UITabBarDelegate
+- (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    if (self.centerButton) {
+        [self doNotHighlight:self.centerButton];
+    }
 }
 
 @end

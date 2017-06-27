@@ -42,9 +42,10 @@
 
 - (void)setTitle:(NSString *)title {
     if (!_entryTitle) {
-        _entryTitle = [[UILabel alloc]initWithFrame:CGRectMake(7, 12 , SCREEN_WIDTH/3, SCREEN_WIDTH/3)];
+        _entryTitle = [[UILabel alloc]initWithFrame:CGRectMake(0,  30 + self.frame.size.height/2 , self.frame.size.width, 30)];
         _entryTitle.numberOfLines = 0;
         _entryTitle.font = [UIFont systemFontOfSize:13];
+        _entryTitle.textAlignment = NSTextAlignmentCenter;
         _entryTitle.textColor = [UIColor grayColor];
         [self.contentView addSubview:_entryTitle];
     }

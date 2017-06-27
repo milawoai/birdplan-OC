@@ -12,4 +12,5 @@
 
 -(void)setContentCtrl:(UITabBarController *)contentCtrl;
 -(void)setImageSize:(CGSize)imageSize;
+//- (void)setBadgetUIWithBadgetNumber:(NSUInteger)badgetNumber;
 @end

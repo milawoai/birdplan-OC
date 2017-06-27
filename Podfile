@@ -6,10 +6,12 @@ target 'birdplanOC' do
   # use_frameworks!
 
   # Pods for birdplanOC
-  pod 'AFNetworking', '~> 3.1.0'
-  pod 'Masonry',
-  pod 'SDCycleScrollView','~> 1.64'
-
+  pod 'AFNetworking'
+  pod 'Masonry'
+  pod 'SDCycleScrollView'
+  pod 'SDWebImage'
+  pod 'MMDrawerController'
+  
   target 'birdplanOCTests' do
     inherit! :search_paths
     # Pods for testing
