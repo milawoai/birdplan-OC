@@ -126,8 +126,7 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setFakeData];
-    [self createCycleScrollView];
-    [self createCollectionView];
+    [self createUI];
     // Do any additional setup after loading the view.
 }
 
@@ -153,6 +152,12 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
 
 #pragma mark ---- UI init
+
+- (void) createUI {
+    [self createCycleScrollView];
+    [self createCollectionView];
+    [self setUI];
+}
 
 - (void) createCycleScrollView {
     
@@ -193,6 +198,10 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     }
 }
 
+-(void) setUI {
+    self.view.backgroundColor = bdp_color_white;
+}
+
 #pragma mark ---- UICollectionViewDataSource
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
@@ -203,9 +212,8 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.totallNumber;
+    return self.datas.count;
     // return _collectionInfos.count;
-    //return _section0Array.count;
 }
 
 
@@ -220,6 +228,7 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         [cell setTitle:[[_datas objectAtIndex:indexPath.row] title]];
     }
     
+    // 设置边框，防止重叠
     if (indexPath.row % _colNumber == (_colNumber - 1) || indexPath.row == (_totallNumber-1)) {
         [cell addRightBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
     }
@@ -284,13 +293,26 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 // 选中某item
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSInteger index = indexPath.row;
+    BDPHomeLearnData *cellLearnData = (BDPHomeLearnData *)[self.datas objectAtIndex:index];
+    
     BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
     [ctrl setHidesBottomBarWhenPushed:YES];
     [self.navigationController pushViewController:ctrl animated:YES];
-//    if (_collectionInfos && _collectionInfos.count > 0) {
-//        SDHZShareCollectionInfo *info = _collectionInfos[indexPath.row];
-//        [self shareActionWithFlag:info.shareFlag];
+//    
+//    if (cellLearnData && cellLearnData.className) {
+//        Class clzz = NSClassFromString(cellLearnData.className);
+//        if ([clzz isSubclassOfClass: [UIViewController class]]) {
+//            UIViewController * ctrl = [[clzz alloc] init];
+//            [ctrl setHidesBottomBarWhenPushed:YES];
+//            [self.navigationController pushViewController:ctrl animated:YES];
+//        }
+//    } else {
+//        BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
+//        [ctrl setHidesBottomBarWhenPushed:YES];
+//        [self.navigationController pushViewController:ctrl animated:YES];
 //    }
+    
 }
 
 - (void)setFakeData {
@@ -302,6 +324,11 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         BDPHomeLearnData *obj = [BDPHomeLearnData new];
         obj.learnID = i;
         obj.title = [NSString stringWithFormat:@"第%d课",i+1];
+        if (i == 0 ) {
+            obj.className = @"BDPDrawerViewController";
+        } else {
+            obj.className = @"BDPTestViewController";
+        }
         [_datas addObject:obj];
     }
 }

@@ -71,44 +71,6 @@ static NSString *badgetNumberKey = @"badgetNumberKey";
     method_exchangeImplementations(originalMethod, swizzledMethod);
 }
 
-//
-//- (void)setBadgetUIWithBadgetNumber:(NSUInteger)badgetNumber {
-//    NSString *badgetStr = @"";
-//    if (badgetNumber <= 99) {
-//        badgetStr = [NSString stringWithFormat:@"%lu", (unsigned long)badgetNumber];
-//    } else {
-//        badgetStr = @"99+";
-//    }
-//    
-//    for (UIView *childView in self.subviews) {
-//        if (![childView isKindOfClass:NSClassFromString(@"UITabBarButton")]) {
-//            /** 如果不是按钮，那么就继续*/
-//            continue;
-//        }
-//        UIView* tabBarImage;
-//        CGRect frame;
-//        for (UIView *tabBtnChildView in childView.subviews) {
-//            if ([tabBtnChildView isKindOfClass:NSClassFromString(@"UITabBarSwappableImageView")]) {
-//                tabBarImage = tabBtnChildView;
-//                CGRect frame = tabBarImage.frame;
-//                NSString *imgSizeStr = objc_getAssociatedObject(self, &imageSizeKey);
-//                CGSize imgSize = CGSizeFromString(imgSizeStr);
-//                if (imgSize.width > 0 && imgSize.height > 0) {
-//                    frame.size = imgSize;
-//                }
-//            }
-//        }
-//    }
-//    
-//    UIView *badgetView = [[UIView alloc] init];
-//    UILabel *badgetLabel = [[UILabel alloc] init];
-//    badgetView.backgroundColor = [UIColor redColor];
-//    badgetLabel.text = badgetStr;
-//    badgetLabel.textColor = [UIColor blackColor];
-//    [badgetView addSubview:badgetLabel];
-//    [self addSubview:badgetView];
-//}
-
 -(void)my_layoutSubviews
 {
     [self my_layoutSubviews];
@@ -138,8 +100,6 @@ static NSString *badgetNumberKey = @"badgetNumberKey";
                 tabBarLabel = tabBtnChildView;
             }
         }
-        
-        
         
         /** tabbarbtn总的高度*/
         CGFloat oldHeight = CGRectGetHeight(tabBarLabel.bounds)+CGRectGetHeight(tabBarImage.bounds);

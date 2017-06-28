@@ -12,4 +12,6 @@
 @property (nonatomic, copy) NSString *url;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) NSInteger learnID;
+@property (nonatomic, copy) NSString *className;
+@property (nonatomic, copy) NSString *methodName;
 @end

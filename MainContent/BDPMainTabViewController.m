@@ -10,7 +10,7 @@
 #import "BDPMainCollectionViewController.h"
 #import "BDPNavigationViewController.h"
 #import "BDPCodeHomePageViewController.h"
-#import "UITabBar+BDPFuncFix.h"
+// #import "UITabBar+BDPFuncFix.h"
 //#import "UITabBar+BDPFuncFix.h"
 
 static dispatch_once_t onceToken;
@@ -57,6 +57,7 @@ static BDPMainTabViewController *shared = nil;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setUI];
     
     // Do any additional setup after loading the view.
 }
@@ -237,6 +238,9 @@ static BDPMainTabViewController *shared = nil;
     self.tabBar.hidden = tabBarHidden;
 }
 
+-(void) setUI {
+    self.tabBar.backgroundColor = bdp_color_black;
+}
 #pragma mark - UITabBarDelegate
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
     if (self.centerButton) {
