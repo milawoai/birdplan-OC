@@ -27,14 +27,16 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     BDPMainTabViewController *mainController = [[BDPMainTabViewController alloc] init];
-    
-//    UIViewController *mainController = [[UIViewController alloc] init];
-//    UIWebView *webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.medlinker.com/h5/interlocution/index.html?med_channel=shuidi3"]]];
-//    mainController.view = webView;
-    
+    mainController.view.backgroundColor = bdp_color_white;
+    [mainController setNeedsStatusBarAppearanceUpdate];
     self.window.rootViewController = mainController;
     [self.window makeKeyAndVisible];
+    
+    
+    //    UIViewController *mainController = [[UIViewController alloc] init];
+    //    UIWebView *webView = [[UIWebView alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //    [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.medlinker.com/h5/interlocution/index.html?med_channel=shuidi3"]]];
+    //    mainController.view = webView;
     
     return YES;
 }

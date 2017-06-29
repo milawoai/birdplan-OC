@@ -46,6 +46,12 @@
 		FC69229C1F036289001B1B37 /* BDPLeftDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC69229B1F036289001B1B37 /* BDPLeftDrawController.m */; };
 		FC69229D1F036289001B1B37 /* BDPLeftDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC69229B1F036289001B1B37 /* BDPLeftDrawController.m */; };
 		FC69229E1F036289001B1B37 /* BDPLeftDrawController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC69229B1F036289001B1B37 /* BDPLeftDrawController.m */; };
+		FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
+		FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
+		FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
+		FC6922AF1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
+		FC6922B01F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
+		FC6922B11F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
 		FC9C4DB41EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
 		FC9C4DB51EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
 		FC9C4DB61EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
@@ -113,6 +119,10 @@
 		FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPDrawerViewController.m; path = UI/purcode/1_drawViewController/BDPDrawerViewController.m; sourceTree = "<group>"; };
 		FC69229A1F036289001B1B37 /* BDPLeftDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPLeftDrawController.h; path = UI/purcode/1_drawViewController/BDPLeftDrawController.h; sourceTree = "<group>"; };
 		FC69229B1F036289001B1B37 /* BDPLeftDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPLeftDrawController.m; path = UI/purcode/1_drawViewController/BDPLeftDrawController.m; sourceTree = "<group>"; };
+		FC6922A61F03C6AF001B1B37 /* BDPDrawCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPDrawCenterViewController.h; path = UI/purcode/1_drawViewController/BDPDrawCenterViewController.h; sourceTree = "<group>"; };
+		FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPDrawCenterViewController.m; path = UI/purcode/1_drawViewController/BDPDrawCenterViewController.m; sourceTree = "<group>"; };
+		FC6922AD1F04AE63001B1B37 /* UIViewController+BDPNavSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BDPNavSetting.h"; path = "category/UIViewController+BDPNavSetting.h"; sourceTree = "<group>"; };
+		FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BDPNavSetting.m"; path = "category/UIViewController+BDPNavSetting.m"; sourceTree = "<group>"; };
 		FC9C4DB21EF91E0700123724 /* BDPHomeLearnData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPHomeLearnData.h; path = model/BDPHomeLearnData.h; sourceTree = "<group>"; };
 		FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPHomeLearnData.m; path = model/BDPHomeLearnData.m; sourceTree = "<group>"; };
 		FCD70F481EA0AB4B0061F8A8 /* birdplanOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = birdplanOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -255,6 +265,7 @@
 		FC6922931F028D8B001B1B37 /* 1_drawViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FC6922A51F03C673001B1B37 /* centerViewController */,
 				FC6922991F0361DC001B1B37 /* leftViewController */,
 				FC6922941F028E1D001B1B37 /* BDPDrawerViewController.h */,
 				FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */,
@@ -278,6 +289,15 @@
 				FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		FC6922A51F03C673001B1B37 /* centerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FC6922A61F03C6AF001B1B37 /* BDPDrawCenterViewController.h */,
+				FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */,
+			);
+			name = centerViewController;
 			sourceTree = "<group>";
 		};
 		FC9C4DB11EF91CDC00123724 /* Model */ = {
@@ -372,6 +392,8 @@
 				FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */,
 				FC4905DD1EF7960300F825AF /* UIView+BDPHelper.h */,
 				FC4905DE1EF7960300F825AF /* UIView+BDPHelper.m */,
+				FC6922AD1F04AE63001B1B37 /* UIViewController+BDPNavSetting.h */,
+				FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */,
 			);
 			name = Categroy;
 			sourceTree = "<group>";
@@ -392,8 +414,8 @@
 				FC07EBCA1EB9F65B00EFF9C7 /* Cell */,
 				FC2889F11EA79CE60061F825 /* BDPMainCollectionViewController.h */,
 				FC2889F21EA79CE60061F825 /* BDPMainCollectionViewController.m */,
-				FC4905D81EF77E0200F825AF /* BDPCodeHomePageViewController.h */,
 				FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */,
+				FC4905D81EF77E0200F825AF /* BDPCodeHomePageViewController.h */,
 			);
 			name = PureCode;
 			sourceTree = "<group>";
@@ -696,10 +718,12 @@
 				FC9C4DB41EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC4905D01EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
 				FC4905CB1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
+				FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FC4905DF1EF7960300F825AF /* UIView+BDPHelper.m in Sources */,
 				FC4905C01EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC2889F31EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
 				FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */,
+				FC6922AF1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -710,6 +734,7 @@
 				FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
 				FC4905C11EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
+				FC6922B01F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 				FC6922971F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC2889F41EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
@@ -717,6 +742,7 @@
 				FC4905CC1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
 				FC9C4DB51EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC69229D1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
+				FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
 				FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 				FC4905D11EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
@@ -731,6 +757,7 @@
 				FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHelpers.m in Sources */,
 				FC4905C21EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
+				FC6922B11F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 				FC6922981F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC2889F51EA79CE60061F825 /* BDPMainCollectionViewController.m in Sources */,
@@ -738,6 +765,7 @@
 				FC4905CD1EF69C8500F825AF /* UITabBar+BDPFuncFix.m in Sources */,
 				FC9C4DB61EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC69229E1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
+				FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
 				FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 				FC4905D21EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,

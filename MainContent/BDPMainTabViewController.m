@@ -248,4 +248,8 @@ static BDPMainTabViewController *shared = nil;
     }
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle {
+    return UIStatusBarStyleDefault;
+}
+
 @end

@@ -11,6 +11,7 @@
 
 // 宽高
 #define SCREEN_HEIGHT ([[UIScreen mainScreen]bounds].size.height)
+#define SCREEN_HEIGHT_NO_NAV ([[UIScreen mainScreen]bounds].size.height) - 64
 
 #define SCREEN_WIDTH ([[UIScreen mainScreen]bounds].size.width)
 
