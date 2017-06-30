@@ -8,6 +8,13 @@
 
 #import "UIViewController+BDPNavSetting.h"
 
+@implementation UIViewController (checkPresent)
+
+- (BOOL)isPresent {
+    return self.navigationController.topViewController != self;
+}
+@end
+
 @implementation UIViewController (navSetting)
 
 - (void)addLeftBarButtonItem {

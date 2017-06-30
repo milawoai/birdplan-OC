@@ -6,7 +6,7 @@
 //  Copyright © 2017年 zhoushijie. All rights reserved.
 //
 
-#import "UITabBar+BDPFuncFix.h"
+#import "UITabBar+BDPBiggerTabbar.h"
 #import <objc/runtime.h>
 #import "AppDelegate.h"
 

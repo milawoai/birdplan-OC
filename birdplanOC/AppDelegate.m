@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "BDPMainTabViewController.h"
-#import "BDPMainCollectionViewController.h"
 
 @interface AppDelegate ()
 

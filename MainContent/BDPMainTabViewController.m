@@ -7,7 +7,6 @@
 //
 
 #import "BDPMainTabViewController.h"
-#import "BDPMainCollectionViewController.h"
 #import "BDPNavigationViewController.h"
 #import "BDPCodeHomePageViewController.h"
 // #import "UITabBar+BDPFuncFix.h"
@@ -102,18 +101,17 @@ static BDPMainTabViewController *shared = nil;
     _codeNavigationController = [[BDPNavigationViewController alloc] initWithRootViewController:_codeCollectionViewController];
     _codeNavigationController.navigationBar.translucent = NO;
     
-//    UIImage *tabbarImage = [UIImage image:[UIImage imageNamed:@"tabbar_code"] resize:CGSizeMake(60, 60)];
-//    UIImage *selectedTabbarImage = [UIImage image:[UIImage imageNamed:@"tabbar_code"] resize:CGSizeMake(60, 60)];
+    UIImage *tabbarImage = [UIImage image:[UIImage imageNamed:@"tabbar_code"] resize:CGSizeMake(60, 60)];
+    UIImage *selectedTabbarImage = [UIImage image:[UIImage imageNamed:@"tabbar_code_sel"] resize:CGSizeMake(60, 60)];
     
-    UIImage *tabbarImage = [UIImage imageNamed:@"tabbar_code"];
-    UIImage *selectedTabbarImage = [UIImage imageNamed:@"tabbar_code"];
+//    UIImage *tabbarImage = [UIImage imageNamed:@"tabbar_code"];
+//    UIImage *selectedTabbarImage = [UIImage imageNamed:@"tabbar_code"];
     _codeNavigationController.tabBarItem.image = [tabbarImage imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
     _codeNavigationController.tabBarItem.selectedImage = selectedTabbarImage;
     _codeNavigationController.tabBarItem.title = @"code";
     _codeNavigationController.tabBarItem.badgeValue = @"99";
     [_codeNavigationController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0]} forState:UIControlStateNormal];
     [_codeNavigationController.tabBarItem setTitleTextAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:13.0]} forState:UIControlStateSelected];
-    
     return _codeNavigationController;
 }
 

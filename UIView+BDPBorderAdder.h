@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIView (BDPHelper)
+@interface UIView (BDPBorderAdder)
 
 -(void)addBottomBorderWithColor: (UIColor *) color andWidth:(CGFloat) borderWidth;
 -(void)addLeftBorderWithColor: (UIColor *) color andWidth:(CGFloat) borderWidth;

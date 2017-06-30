@@ -7,7 +7,7 @@
 //
 
 #import "BDPMainCollectionViewCell.h"
-#import "UIView+BDPHelper.h"
+#import "UIView+BDPBorderAdder.h"
 
 @interface BDPMainCollectionViewCell ()
 

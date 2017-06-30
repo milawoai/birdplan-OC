@@ -9,8 +9,8 @@
 #ifndef BDPCategroy_h
 #define BDPCategroy_h
 
-#import "UIColor+BDPHelpers.h"
+#import "UIColor+BDPHEXHelpers.h"
 #import "UIImage+BDPHelper.h"
-#import "UIView+BDPHelper.h"
+#import "UIView+BDPBorderAdder.h"
 
 #endif /* BDPCategroy_h */

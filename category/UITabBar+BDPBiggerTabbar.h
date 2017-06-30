@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UITabBar (BDPFuncFix)
+@interface UITabBar (BDPBiggerTabbar)
 
 -(void)setContentCtrl:(UITabBarController *)contentCtrl;
 -(void)setImageSize:(CGSize)imageSize;

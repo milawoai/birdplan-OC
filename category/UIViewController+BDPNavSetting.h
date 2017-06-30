@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface UIViewController (checkPresent)
+
+@property(nullable, nonatomic,readonly,strong) UINavigationController *navigationController;
+- (BOOL)isPresent;
+
+@end
+
+
 @interface UIViewController (navSetting)
 
 - (void)addLeftBarButtonItem;

@@ -6,9 +6,9 @@
 //  Copyright © 2017年 zhoushijie. All rights reserved.
 //
 
-#import "UIView+BDPHelper.h"
+#import "UIView+BDPBorderAdder.h"
 
-@implementation UIView (BDPHelper)
+@implementation UIView (BDPBorderAdder)
 
 -(void)addTopBorderWithColor:(UIColor *)color andWidth:(CGFloat) borderWidth {
     CALayer *border = [CALayer layer];

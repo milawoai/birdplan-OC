@@ -8,6 +8,7 @@
 
 #import "BDPDrawCenterViewController.h"
 #import "BDPDrawerViewController.h"
+#import "UIViewController+BDPNavSetting.h"
 
 @interface BDPDrawCenterViewController ()<UITableViewDelegate, UITableViewDataSource,UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -27,6 +28,8 @@ static NSString * const BDPDrawCenterViewControllerReuseIdentifier = @"BDPDrawCe
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
+    
+   
     
     // self.view.backgroundColor = bdp_color_black;
     // Do any additional setup after loading the view.
@@ -56,22 +59,18 @@ static NSString * const BDPDrawCenterViewControllerReuseIdentifier = @"BDPDrawCe
 //    }
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 -(void) setUI {
     [self createSubView];
 }
 
 -(void) createSubView {
+    BOOL isPresent = [self isPresent];
+    // BOOL isPresent =  self.navigationController.topViewController == self;
     if (!_tableView) {
-        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT_NO_NAV)];
+//        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,[self isPresent]?SCREEN_HEIGHT: SCREEN_HEIGHT_NO_NAV)];
+        
+        self.tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH,isPresent?SCREEN_HEIGHT:SCREEN_HEIGHT_NO_NAV)];
+
         self.tableView.delegate = self;
         self.tableView.dataSource = self;
         [self.view addSubview:self.tableView];
@@ -83,9 +82,13 @@ static NSString * const BDPDrawCenterViewControllerReuseIdentifier = @"BDPDrawCe
         self.datas = [[NSMutableArray alloc] init];
     }
     
-    for (int i = 0; i< 10; i++) {
-        [self.datas addObject:[NSString stringWithFormat:@"test_%d",i]];
-    }
+    //         --- 模拟加载延迟
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        for (int i = 0; i< 10; i++) {
+            [self.datas addObject:[NSString stringWithFormat:@"test_%d",i]];
+        }
+        [self.tableView reloadData];
+    });
 }
 
 - (void) setDrawerController:(BDPDrawerViewController *)drawCtrl {

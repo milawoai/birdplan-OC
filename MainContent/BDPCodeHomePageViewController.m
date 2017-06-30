@@ -12,7 +12,7 @@
 #import "SDCycleScrollView.h"
 #import "BDPMainCollectionViewCell.h"
 
-#import "UIView+BDPHelper.h"
+#import "UIView+BDPBorderAdder.h"
 
 #import "BDPHomeLearnData.h"
 
@@ -137,19 +137,7 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 // 本地加载 --- 创建不带标题的图片轮播器
-
-
 
 #pragma mark ---- UI init
 
@@ -296,6 +284,7 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         if ([clzz isSubclassOfClass: [UIViewController class]]) {
             UIViewController * ctrl = [[clzz alloc] init];
             [ctrl setHidesBottomBarWhenPushed:YES];
+            // [self presentViewController:ctrl animated:true completion:nil];
             [self.navigationController pushViewController:ctrl animated:YES];
         }
     } else {
