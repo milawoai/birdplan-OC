@@ -37,6 +37,9 @@
 		FC4905E91EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
 		FC4905EA1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
 		FC4905EB1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
+		FC4C6F751F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
+		FC4C6F761F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
+		FC4C6F771F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
 		FC6922961F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */; };
 		FC6922971F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */; };
 		FC6922981F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */; };
@@ -110,6 +113,8 @@
 		FC4905E31EF7C13100F825AF /* BDPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPTestViewController.h; path = page/BDPTestViewController.h; sourceTree = "<group>"; };
 		FC4905E41EF7C13100F825AF /* BDPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPTestViewController.m; path = page/BDPTestViewController.m; sourceTree = "<group>"; };
 		FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BDPTestViewController.xib; path = page/BDPTestViewController.xib; sourceTree = "<group>"; };
+		FC4C6F731F0631450067A79E /* BDPAlphaModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPAlphaModalViewController.h; path = UI/purcode/BDPAlphaModalViewController.h; sourceTree = "<group>"; };
+		FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPAlphaModalViewController.m; path = UI/purcode/BDPAlphaModalViewController.m; sourceTree = "<group>"; };
 		FC6922941F028E1D001B1B37 /* BDPDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPDrawerViewController.h; path = UI/purcode/1_drawViewController/BDPDrawerViewController.h; sourceTree = "<group>"; };
 		FC6922951F028E1D001B1B37 /* BDPDrawerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPDrawerViewController.m; path = UI/purcode/1_drawViewController/BDPDrawerViewController.m; sourceTree = "<group>"; };
 		FC69229A1F036289001B1B37 /* BDPLeftDrawController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPLeftDrawController.h; path = UI/purcode/1_drawViewController/BDPLeftDrawController.h; sourceTree = "<group>"; };
@@ -248,6 +253,15 @@
 				FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */,
 			);
 			name = Pages;
+			sourceTree = "<group>";
+		};
+		FC4C6F721F0630F00067A79E /* alphaModalController */ = {
+			isa = PBXGroup;
+			children = (
+				FC4C6F731F0631450067A79E /* BDPAlphaModalViewController.h */,
+				FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */,
+			);
+			name = alphaModalController;
 			sourceTree = "<group>";
 		};
 		FC6922931F028D8B001B1B37 /* 1_DrawViewController(抽屉效果) */ = {
@@ -409,6 +423,7 @@
 		FCE2ED751EF161F8003BAC97 /* PureCode */ = {
 			isa = PBXGroup;
 			children = (
+				FC4C6F721F0630F00067A79E /* alphaModalController */,
 				FC6922B21F04D179001B1B37 /* 0_CollectionView */,
 				FC6922931F028D8B001B1B37 /* 1_DrawViewController(抽屉效果) */,
 			);
@@ -715,6 +730,7 @@
 				FC4905CB1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */,
 				FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FC4905DF1EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */,
+				FC4C6F751F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
 				FC4905C01EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */,
 				FC6922AF1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
@@ -725,6 +741,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4C6F761F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
 				FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */,
 				FC4905C11EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
@@ -747,6 +764,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4C6F771F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
 				FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */,
 				FC4905C21EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,

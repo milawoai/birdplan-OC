@@ -18,6 +18,8 @@ typedef NS_ENUM(NSInteger,BDPIndexOfMainTab) {
 
 + (instancetype)sharedInstance;
 
+- (instancetype)initWithBigTabFlag:(BOOL)isGenMidBigTab asNormalTab:(BOOL)isMidBigTabAsNormalTab;
+
 + (void)dellocTab;
 
 - (void)switchToTab:(NSInteger)index;
