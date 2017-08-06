@@ -10,6 +10,10 @@
 		39F67E88051B776B88A2416B /* libPods-birdplanOCTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E288042BCA1F47D30A16AB1 /* libPods-birdplanOCTests.a */; };
 		526F065952F3F0BA441DD3E5 /* libPods-birdplanOCUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E11B2EF1C8B5A95C94D4156A /* libPods-birdplanOCUITests.a */; };
 		D3CA5578028B372B717EB0D6 /* libPods-birdplanOC.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6D9DC4BAE98B007F6ECA7A /* libPods-birdplanOC.a */; };
+		FC006BB21F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
+		FC006BB31F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
+		FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
+		FC006BB61F1B663100218198 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC006BB51F1B663100218198 /* AVFoundation.framework */; };
 		FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
@@ -19,24 +23,9 @@
 		FC4905C01EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
 		FC4905C11EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
 		FC4905C21EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
-		FC4905CB1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CA1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m */; };
-		FC4905CC1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CA1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m */; };
-		FC4905CD1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CA1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m */; };
-		FC4905D01EF774D300F825AF /* UIImage+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */; };
-		FC4905D11EF774D300F825AF /* UIImage+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */; };
-		FC4905D21EF774D300F825AF /* UIImage+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */; };
 		FC4905DA1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */; };
 		FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */; };
 		FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */; };
-		FC4905DF1EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPBorderAdder.m */; };
-		FC4905E01EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPBorderAdder.m */; };
-		FC4905E11EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905DE1EF7960300F825AF /* UIView+BDPBorderAdder.m */; };
-		FC4905E61EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
-		FC4905E71EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
-		FC4905E81EF7C13100F825AF /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905E41EF7C13100F825AF /* BDPTestViewController.m */; };
-		FC4905E91EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
-		FC4905EA1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
-		FC4905EB1EF7C13100F825AF /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */; };
 		FC4C6F751F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
 		FC4C6F761F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
 		FC4C6F771F0631450067A79E /* BDPAlphaModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */; };
@@ -49,9 +38,13 @@
 		FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
 		FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
 		FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */; };
-		FC6922AF1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
-		FC6922B01F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
-		FC6922B11F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */; };
+		FC8706541F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8706471F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.m */; };
+		FC8706551F0BCEEC00EF9E0B /* UIImage+BDPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FC8706491F0BCEEC00EF9E0B /* UIImage+BDPHelper.m */; };
+		FC8706561F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.m in Sources */ = {isa = PBXBuildFile; fileRef = FC87064B1F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.m */; };
+		FC8706571F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m in Sources */ = {isa = PBXBuildFile; fileRef = FC87064D1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m */; };
+		FC8706581F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = FC87064F1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m */; };
+		FC87065C1F0BCF2C00EF9E0B /* BDPTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC87065A1F0BCF2C00EF9E0B /* BDPTestViewController.m */; };
+		FC87065D1F0BCF2C00EF9E0B /* BDPTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC87065B1F0BCF2C00EF9E0B /* BDPTestViewController.xib */; };
 		FC9C4DB41EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
 		FC9C4DB51EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
 		FC9C4DB61EF91E0700123724 /* BDPHomeLearnData.m in Sources */ = {isa = PBXBuildFile; fileRef = FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */; };
@@ -63,9 +56,6 @@
 		FCD70F5B1EA0AB4B0061F8A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD70F591EA0AB4B0061F8A8 /* LaunchScreen.storyboard */; };
 		FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F651EA0AB4C0061F8A8 /* birdplanOCTests.m */; };
 		FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */; };
-		FCE2ED6E1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m */; };
-		FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m */; };
-		FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,25 +84,19 @@
 		4E288042BCA1F47D30A16AB1 /* libPods-birdplanOCTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-birdplanOCTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DDB0175DABE0F55ED77B78A /* Pods-birdplanOC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-birdplanOC.release.xcconfig"; path = "Pods/Target Support Files/Pods-birdplanOC/Pods-birdplanOC.release.xcconfig"; sourceTree = "<group>"; };
 		E11B2EF1C8B5A95C94D4156A /* libPods-birdplanOCUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-birdplanOCUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC006BB01F1B659F00218198 /* BDPQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPQRCodeScannerViewController.h; path = UI/purcode/2_qrcodeScan/BDPQRCodeScannerViewController.h; sourceTree = "<group>"; };
+		FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPQRCodeScannerViewController.m; path = UI/purcode/2_qrcodeScan/BDPQRCodeScannerViewController.m; sourceTree = "<group>"; };
+		FC006BB51F1B663100218198 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FC07EBC51EB9F5D400EFF9C7 /* BDPMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainTabViewController.h; path = MainContent/BDPMainTabViewController.h; sourceTree = "<group>"; };
 		FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainTabViewController.m; path = MainContent/BDPMainTabViewController.m; sourceTree = "<group>"; };
 		FC07EBCB1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainCollectionViewCell.h; path = MainContent/BDPMainCollectionViewCell.h; sourceTree = "<group>"; };
 		FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainCollectionViewCell.m; path = MainContent/BDPMainCollectionViewCell.m; sourceTree = "<group>"; };
-		FC07EC141EB9FF2000EFF9C7 /* BDPUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPUIConstants.h; sourceTree = "<group>"; };
 		FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = pch/PrefixHeader.pch; sourceTree = "<group>"; };
+		FC1DE61B1F1F91EB00043867 /* RuleHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleHead.h; path = Constants/RuleHead.h; sourceTree = SOURCE_ROOT; };
 		FC4905BE1EF6827F00F825AF /* BDPNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPNavigationViewController.h; path = MainContent/BDPNavigationViewController.h; sourceTree = "<group>"; };
 		FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPNavigationViewController.m; path = MainContent/BDPNavigationViewController.m; sourceTree = "<group>"; };
-		FC4905C91EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UITabBar+BDPBiggerTabbar.h"; path = "category/UITabBar+BDPBiggerTabbar.h"; sourceTree = "<group>"; };
-		FC4905CA1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UITabBar+BDPBiggerTabbar.m"; path = "category/UITabBar+BDPBiggerTabbar.m"; sourceTree = "<group>"; };
-		FC4905CE1EF774D300F825AF /* UIImage+BDPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+BDPHelper.h"; path = "category/UIImage+BDPHelper.h"; sourceTree = "<group>"; };
-		FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+BDPHelper.m"; path = "category/UIImage+BDPHelper.m"; sourceTree = "<group>"; };
 		FC4905D81EF77E0200F825AF /* BDPCodeHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPCodeHomePageViewController.h; path = MainContent/BDPCodeHomePageViewController.h; sourceTree = "<group>"; };
 		FC4905D91EF77E0200F825AF /* BDPCodeHomePageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPCodeHomePageViewController.m; path = MainContent/BDPCodeHomePageViewController.m; sourceTree = "<group>"; };
-		FC4905DD1EF7960300F825AF /* UIView+BDPBorderAdder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BDPBorderAdder.h"; sourceTree = "<group>"; };
-		FC4905DE1EF7960300F825AF /* UIView+BDPBorderAdder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BDPBorderAdder.m"; sourceTree = "<group>"; };
-		FC4905E31EF7C13100F825AF /* BDPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPTestViewController.h; path = page/BDPTestViewController.h; sourceTree = "<group>"; };
-		FC4905E41EF7C13100F825AF /* BDPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPTestViewController.m; path = page/BDPTestViewController.m; sourceTree = "<group>"; };
-		FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BDPTestViewController.xib; path = page/BDPTestViewController.xib; sourceTree = "<group>"; };
 		FC4C6F731F0631450067A79E /* BDPAlphaModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPAlphaModalViewController.h; path = UI/purcode/BDPAlphaModalViewController.h; sourceTree = "<group>"; };
 		FC4C6F741F0631450067A79E /* BDPAlphaModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPAlphaModalViewController.m; path = UI/purcode/BDPAlphaModalViewController.m; sourceTree = "<group>"; };
 		FC6922941F028E1D001B1B37 /* BDPDrawerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPDrawerViewController.h; path = UI/purcode/1_drawViewController/BDPDrawerViewController.h; sourceTree = "<group>"; };
@@ -121,8 +105,23 @@
 		FC69229B1F036289001B1B37 /* BDPLeftDrawController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPLeftDrawController.m; path = UI/purcode/1_drawViewController/BDPLeftDrawController.m; sourceTree = "<group>"; };
 		FC6922A61F03C6AF001B1B37 /* BDPDrawCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPDrawCenterViewController.h; path = UI/purcode/1_drawViewController/BDPDrawCenterViewController.h; sourceTree = "<group>"; };
 		FC6922A71F03C6AF001B1B37 /* BDPDrawCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPDrawCenterViewController.m; path = UI/purcode/1_drawViewController/BDPDrawCenterViewController.m; sourceTree = "<group>"; };
-		FC6922AD1F04AE63001B1B37 /* UIViewController+BDPNavSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIViewController+BDPNavSetting.h"; path = "category/UIViewController+BDPNavSetting.h"; sourceTree = "<group>"; };
-		FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIViewController+BDPNavSetting.m"; path = "category/UIViewController+BDPNavSetting.m"; sourceTree = "<group>"; };
+		FC8706451F0BCEEC00EF9E0B /* BDPCategroy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPCategroy.h; sourceTree = "<group>"; };
+		FC8706461F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+BDPHEXHelpers.h"; sourceTree = "<group>"; };
+		FC8706471F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+BDPHEXHelpers.m"; sourceTree = "<group>"; };
+		FC8706481F0BCEEC00EF9E0B /* UIImage+BDPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+BDPHelper.h"; sourceTree = "<group>"; };
+		FC8706491F0BCEEC00EF9E0B /* UIImage+BDPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BDPHelper.m"; sourceTree = "<group>"; };
+		FC87064A1F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITabBar+BDPBiggerTabbar.h"; sourceTree = "<group>"; };
+		FC87064B1F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+BDPBiggerTabbar.m"; sourceTree = "<group>"; };
+		FC87064C1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BDPBorderAdder.h"; sourceTree = "<group>"; };
+		FC87064D1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BDPBorderAdder.m"; sourceTree = "<group>"; };
+		FC87064E1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+BDPNavSetting.h"; sourceTree = "<group>"; };
+		FC87064F1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+BDPNavSetting.m"; sourceTree = "<group>"; };
+		FC8706511F0BCEEC00EF9E0B /* BDPColorConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPColorConstants.h; sourceTree = "<group>"; };
+		FC8706521F0BCEEC00EF9E0B /* BDPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPConstants.h; sourceTree = "<group>"; };
+		FC8706531F0BCEEC00EF9E0B /* BDPUIConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPUIConstants.h; sourceTree = "<group>"; };
+		FC8706591F0BCF2C00EF9E0B /* BDPTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPTestViewController.h; path = UI/BDPTestViewController.h; sourceTree = "<group>"; };
+		FC87065A1F0BCF2C00EF9E0B /* BDPTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPTestViewController.m; path = UI/BDPTestViewController.m; sourceTree = "<group>"; };
+		FC87065B1F0BCF2C00EF9E0B /* BDPTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BDPTestViewController.xib; path = UI/BDPTestViewController.xib; sourceTree = "<group>"; };
 		FC9C4DB21EF91E0700123724 /* BDPHomeLearnData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPHomeLearnData.h; path = model/BDPHomeLearnData.h; sourceTree = "<group>"; };
 		FC9C4DB31EF91E0700123724 /* BDPHomeLearnData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPHomeLearnData.m; path = model/BDPHomeLearnData.m; sourceTree = "<group>"; };
 		FCD70F481EA0AB4B0061F8A8 /* birdplanOC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = birdplanOC.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,11 +140,7 @@
 		FCD70F6C1EA0AB4C0061F8A8 /* birdplanOCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = birdplanOCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = birdplanOCUITests.m; sourceTree = "<group>"; };
 		FCD70F721EA0AB4C0061F8A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCE2ED6C1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+BDPHEXHelpers.h"; path = "category/UIColor+BDPHEXHelpers.h"; sourceTree = "<group>"; };
-		FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+BDPHEXHelpers.m"; path = "category/UIColor+BDPHEXHelpers.m"; sourceTree = "<group>"; };
-		FCE2ED711EF15E25003BAC97 /* BDPConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPConstants.h; sourceTree = "<group>"; };
-		FCE2ED721EF15E3B003BAC97 /* BDPColorConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BDPColorConstants.h; sourceTree = "<group>"; };
-		FCE2ED731EF15E9D003BAC97 /* BDPCategroy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPCategroy.h; sourceTree = "<group>"; };
+		FCEC6C081F3768A9007CBC4F /* BDPClassConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPClassConstants.h; sourceTree = "<group>"; };
 		FFC3D82236BB58FA0F0400D3 /* Pods-birdplanOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-birdplanOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-birdplanOCTests/Pods-birdplanOCTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -154,6 +149,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC006BB61F1B663100218198 /* AVFoundation.framework in Frameworks */,
 				D3CA5578028B372B717EB0D6 /* libPods-birdplanOC.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,11 +189,21 @@
 		BF39FE20120D34AA9646BB30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC006BB51F1B663100218198 /* AVFoundation.framework */,
 				0C6D9DC4BAE98B007F6ECA7A /* libPods-birdplanOC.a */,
 				4E288042BCA1F47D30A16AB1 /* libPods-birdplanOCTests.a */,
 				E11B2EF1C8B5A95C94D4156A /* libPods-birdplanOCUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC006BAF1F1B652900218198 /* 2_qrcodeScanner(扫描二维码) */ = {
+			isa = PBXGroup;
+			children = (
+				FC006BB01F1B659F00218198 /* BDPQRCodeScannerViewController.h */,
+				FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */,
+			);
+			name = "2_qrcodeScanner(扫描二维码)";
 			sourceTree = "<group>";
 		};
 		FC07EBCA1EB9F65B00EFF9C7 /* Cell */ = {
@@ -216,23 +222,23 @@
 			name = Utils;
 			sourceTree = "<group>";
 		};
-		FC07EC131EB9FEF100EFF9C7 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				FC07EC141EB9FF2000EFF9C7 /* BDPUIConstants.h */,
-				FCE2ED711EF15E25003BAC97 /* BDPConstants.h */,
-				FCE2ED721EF15E3B003BAC97 /* BDPColorConstants.h */,
-			);
-			name = Constants;
-			sourceTree = "<group>";
-		};
 		FC1371C41EFA6E0600B62FFD /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				FCE2ED6B1EF15C8C003BAC97 /* Categroy */,
+				FC1DE61A1F1F919500043867 /* Rule */,
+				FC8706441F0BCEEC00EF9E0B /* Category */,
+				FC8706501F0BCEEC00EF9E0B /* Constants */,
 			);
 			name = Lib;
 			path = ticker;
+			sourceTree = "<group>";
+		};
+		FC1DE61A1F1F919500043867 /* Rule */ = {
+			isa = PBXGroup;
+			children = (
+				FC1DE61B1F1F91EB00043867 /* RuleHead.h */,
+			);
+			name = Rule;
 			sourceTree = "<group>";
 		};
 		FC2889F01EA79C6A0061F825 /* MainContent */ = {
@@ -243,16 +249,6 @@
 				FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */,
 			);
 			name = MainContent;
-			sourceTree = "<group>";
-		};
-		FC4905E21EF7C0EC00F825AF /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-				FC4905E31EF7C13100F825AF /* BDPTestViewController.h */,
-				FC4905E41EF7C13100F825AF /* BDPTestViewController.m */,
-				FC4905E51EF7C13100F825AF /* BDPTestViewController.xib */,
-			);
-			name = Pages;
 			sourceTree = "<group>";
 		};
 		FC4C6F721F0630F00067A79E /* alphaModalController */ = {
@@ -312,6 +308,35 @@
 			name = 0_CollectionView;
 			sourceTree = "<group>";
 		};
+		FC8706441F0BCEEC00EF9E0B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				FC8706451F0BCEEC00EF9E0B /* BDPCategroy.h */,
+				FC8706461F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.h */,
+				FC8706471F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.m */,
+				FC8706481F0BCEEC00EF9E0B /* UIImage+BDPHelper.h */,
+				FC8706491F0BCEEC00EF9E0B /* UIImage+BDPHelper.m */,
+				FC87064A1F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.h */,
+				FC87064B1F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.m */,
+				FC87064C1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.h */,
+				FC87064D1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m */,
+				FC87064E1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.h */,
+				FC87064F1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m */,
+			);
+			path = Category;
+			sourceTree = SOURCE_ROOT;
+		};
+		FC8706501F0BCEEC00EF9E0B /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				FC8706511F0BCEEC00EF9E0B /* BDPColorConstants.h */,
+				FC8706521F0BCEEC00EF9E0B /* BDPConstants.h */,
+				FC8706531F0BCEEC00EF9E0B /* BDPUIConstants.h */,
+				FCEC6C081F3768A9007CBC4F /* BDPClassConstants.h */,
+			);
+			path = Constants;
+			sourceTree = SOURCE_ROOT;
+		};
 		FC9C4DB11EF91CDC00123724 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,10 +351,8 @@
 			children = (
 				FC1371C41EFA6E0600B62FFD /* Lib */,
 				FC9C4DB11EF91CDC00123724 /* Model */,
-				FC4905E21EF7C0EC00F825AF /* Pages */,
 				FCE2ED741EF161E6003BAC97 /* UI */,
 				FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */,
-				FC07EC131EB9FEF100EFF9C7 /* Constants */,
 				FC07EC121EB9FEDD00EFF9C7 /* Utils */,
 				FC2889F01EA79C6A0061F825 /* MainContent */,
 				FCD70F4A1EA0AB4B0061F8A8 /* birdplanOC */,
@@ -393,28 +416,12 @@
 			path = birdplanOCUITests;
 			sourceTree = "<group>";
 		};
-		FCE2ED6B1EF15C8C003BAC97 /* Categroy */ = {
-			isa = PBXGroup;
-			children = (
-				FC4905C91EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.h */,
-				FC4905CA1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m */,
-				FCE2ED6C1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.h */,
-				FCE2ED6D1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m */,
-				FCE2ED731EF15E9D003BAC97 /* BDPCategroy.h */,
-				FC4905CE1EF774D300F825AF /* UIImage+BDPHelper.h */,
-				FC4905CF1EF774D300F825AF /* UIImage+BDPHelper.m */,
-				FC4905DD1EF7960300F825AF /* UIView+BDPBorderAdder.h */,
-				FC4905DE1EF7960300F825AF /* UIView+BDPBorderAdder.m */,
-				FC6922AD1F04AE63001B1B37 /* UIViewController+BDPNavSetting.h */,
-				FC6922AE1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m */,
-			);
-			name = Categroy;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		FCE2ED741EF161E6003BAC97 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FC8706591F0BCF2C00EF9E0B /* BDPTestViewController.h */,
+				FC87065A1F0BCF2C00EF9E0B /* BDPTestViewController.m */,
+				FC87065B1F0BCF2C00EF9E0B /* BDPTestViewController.xib */,
 				FCE2ED751EF161F8003BAC97 /* PureCode */,
 			);
 			name = UI;
@@ -423,6 +430,7 @@
 		FCE2ED751EF161F8003BAC97 /* PureCode */ = {
 			isa = PBXGroup;
 			children = (
+				FC006BAF1F1B652900218198 /* 2_qrcodeScanner(扫描二维码) */,
 				FC4C6F721F0630F00067A79E /* alphaModalController */,
 				FC6922B21F04D179001B1B37 /* 0_CollectionView */,
 				FC6922931F028D8B001B1B37 /* 1_DrawViewController(抽屉效果) */,
@@ -551,7 +559,7 @@
 				FCD70F5B1EA0AB4B0061F8A8 /* LaunchScreen.storyboard in Resources */,
 				FCD70F581EA0AB4B0061F8A8 /* Assets.xcassets in Resources */,
 				FCD70F561EA0AB4B0061F8A8 /* Main.storyboard in Resources */,
-				FC4905E91EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
+				FC87065D1F0BCF2C00EF9E0B /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +567,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4905EA1EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -567,7 +574,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC4905EB1EF7C13100F825AF /* BDPTestViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -716,24 +722,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC8706581F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m in Sources */,
 				FC4905DA1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 				FC07EBCD1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
 				FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC6922961F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */,
+				FC8706551F0BCEEC00EF9E0B /* UIImage+BDPHelper.m in Sources */,
 				FC69229C1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
+				FC8706571F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m in Sources */,
+				FC006BB21F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */,
-				FCE2ED6E1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */,
-				FC4905E61EF7C13100F825AF /* BDPTestViewController.m in Sources */,
 				FC9C4DB41EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
-				FC4905D01EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
-				FC4905CB1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */,
 				FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
-				FC4905DF1EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */,
 				FC4C6F751F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
+				FC87065C1F0BCF2C00EF9E0B /* BDPTestViewController.m in Sources */,
+				FC8706561F0BCEEC00EF9E0B /* UITabBar+BDPBiggerTabbar.m in Sources */,
 				FC4905C01EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
+				FC8706541F0BCEEC00EF9E0B /* UIColor+BDPHEXHelpers.m in Sources */,
 				FCD70F4D1EA0AB4B0061F8A8 /* main.m in Sources */,
-				FC6922AF1F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,21 +749,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4C6F761F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
-				FCE2ED6F1EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */,
 				FC4905C11EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
-				FC6922B01F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 				FC6922971F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
-				FC4905E71EF7C13100F825AF /* BDPTestViewController.m in Sources */,
-				FC4905CC1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */,
 				FC9C4DB51EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC69229D1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
+				FC006BB31F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
-				FC4905D11EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
-				FC4905E01EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -765,21 +767,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC4C6F771F0631450067A79E /* BDPAlphaModalViewController.m in Sources */,
-				FCE2ED701EF15CBF003BAC97 /* UIColor+BDPHEXHelpers.m in Sources */,
 				FC4905C21EF6827F00F825AF /* BDPNavigationViewController.m in Sources */,
 				FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
-				FC6922B11F04AE63001B1B37 /* UIViewController+BDPNavSetting.m in Sources */,
 				FC6922981F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
-				FC4905E81EF7C13100F825AF /* BDPTestViewController.m in Sources */,
-				FC4905CD1EF69C8500F825AF /* UITabBar+BDPBiggerTabbar.m in Sources */,
 				FC9C4DB61EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC69229E1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
+				FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
-				FC4905D21EF774D300F825AF /* UIImage+BDPHelper.m in Sources */,
-				FC4905E11EF7960300F825AF /* UIView+BDPBorderAdder.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

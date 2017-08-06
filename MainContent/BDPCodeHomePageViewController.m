@@ -307,7 +307,7 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         if (i == 0 ) {
             obj.className = @"BDPDrawerViewController";
         } else if (i == 1) {
-            obj.className = @"BDPDrawCenterViewController";
+            obj.className = @"BDPQRCodeScannerViewController";
         } else {
             obj.className = @"BDPTestViewController";
         }
