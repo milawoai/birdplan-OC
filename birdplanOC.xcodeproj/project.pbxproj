@@ -15,6 +15,7 @@
 		FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
 		FC006BB61F1B663100218198 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC006BB51F1B663100218198 /* AVFoundation.framework */; };
 		FC030CDE1F3AE2BF00C09504 /* BDPAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC030CDD1F3AE2BF00C09504 /* BDPAlertUtils.m */; };
+		FC030D0A1F3B01FD00C09504 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC030D091F3B01FD00C09504 /* QuartzCore.framework */; };
 		FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
@@ -94,6 +95,7 @@
 		FC030CDA1F3ADAAA00C09504 /* BDPSystemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSystemConstants.h; sourceTree = "<group>"; };
 		FC030CDC1F3AE2BF00C09504 /* BDPAlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPAlertUtils.h; sourceTree = "<group>"; };
 		FC030CDD1F3AE2BF00C09504 /* BDPAlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPAlertUtils.m; sourceTree = "<group>"; };
+		FC030D091F3B01FD00C09504 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FC07EBC51EB9F5D400EFF9C7 /* BDPMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainTabViewController.h; path = MainContent/BDPMainTabViewController.h; sourceTree = "<group>"; };
 		FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainTabViewController.m; path = MainContent/BDPMainTabViewController.m; sourceTree = "<group>"; };
 		FC07EBCB1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainCollectionViewCell.h; path = MainContent/BDPMainCollectionViewCell.h; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC030D0A1F3B01FD00C09504 /* QuartzCore.framework in Frameworks */,
 				FC006BB61F1B663100218198 /* AVFoundation.framework in Frameworks */,
 				D3CA5578028B372B717EB0D6 /* libPods-birdplanOC.a in Frameworks */,
 			);
@@ -200,6 +203,7 @@
 		BF39FE20120D34AA9646BB30 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FC030D091F3B01FD00C09504 /* QuartzCore.framework */,
 				FC006BB51F1B663100218198 /* AVFoundation.framework */,
 				0C6D9DC4BAE98B007F6ECA7A /* libPods-birdplanOC.a */,
 				4E288042BCA1F47D30A16AB1 /* libPods-birdplanOCTests.a */,

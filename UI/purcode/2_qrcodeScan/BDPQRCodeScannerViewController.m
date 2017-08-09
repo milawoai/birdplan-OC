@@ -6,9 +6,14 @@
 //  Copyright © 2017年 zhoushijie. All rights reserved.
 //
 
+// 参考
+// iOS高仿微信二维码扫描 http://www.jianshu.com/p/0585332edff6
+// iOS那些简单的动画 http://www.jianshu.com/p/a098f6e3617f
+
 #import "BDPQRCodeScannerViewController.h"
 #import "BDPAlertUtils.h"
 #import <AVFoundation/AVFoundation.h>
+#import <CoreMotion/CoreMotion.h>
 
 #define defaultScanViewSize 300.f
 #define defaultScanViewMarginTop 183.f
@@ -82,8 +87,42 @@
 - (void)createScanContainerView:(CGFloat)blockSize marginTop:(CGFloat)marginTop bottomHeight:(CGFloat)bottomHeight {
     UIView * scanView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - blockSize) / 2, marginTop, blockSize, blockSize)];
     [scanView setBackgroundColor:[UIColor clearColor]];
+    
     [self setFourCornerLayer:scanView borderLength:30.f borderWidth:5.f];
+    
+    [self setScanLineView:scanView marginLeft:10.f scanStart:10.f scanEnd:10.f lineHeight:3.f];
     [self.view addSubview:scanView];
+}
+
+- (void)setScanLineView:(UIView *)scanView marginLeft:(CGFloat)marginLeft scanStart:(CGFloat)scanStart scanEnd:(CGFloat)scanEnd lineHeight:(CGFloat)lineHeight {
+    if (!scanView) return;
+    // todo 参数边界判断
+    
+    CGRect containerRect = scanView.frame;
+    UIView *scanLineView = [[UIView alloc] initWithFrame:CGRectMake(marginLeft, scanStart, containerRect.size.width - (marginLeft * 2), lineHeight)];
+    [scanLineView setBackgroundColor:[UIColor UIColorFromHex:0x34DA5B]];
+    
+    CGFloat scanHeight = containerRect.size.height - scanEnd - scanStart;
+    [self setScanLineAnimation:scanLineView scanHeight:scanHeight];
+    
+    [scanView addSubview:scanLineView];
+}
+
+- (void)setScanLineAnimation:(UIView *)scanLineView scanHeight:(CGFloat)scanHeight{
+    if (!scanLineView) return;
+    
+    DLog(@"%f %f",scanLineView.layer.position.x ,scanLineView.layer.position.y);
+    CABasicAnimation *animation =[CABasicAnimation animationWithKeyPath:@"position"];
+    animation.fromValue = [NSValue valueWithCGPoint:scanLineView.layer.position];
+    CGPoint endPos = CGPointMake(scanLineView.layer.position.x, scanLineView.layer.position.y + scanHeight);
+    animation.toValue = [NSValue valueWithCGPoint:endPos];
+    animation.autoreverses = NO;    //回退动画（动画可逆，即循环）
+    animation.duration = 3.0f;
+    animation.repeatCount = MAXFLOAT;
+    animation.removedOnCompletion = NO;
+    animation.fillMode = kCAFillModeForwards;//removedOnCompletion,fillMode配合使用保持动画完成效果
+    animation.timingFunction=[CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    [scanLineView.layer addAnimation:animation forKey:@"position"];
 }
 
 - (void)setFourCornerLayer:(UIView *) scanView borderLength:(CGFloat)borderLength borderWidth:(CGFloat)borderWidth{
