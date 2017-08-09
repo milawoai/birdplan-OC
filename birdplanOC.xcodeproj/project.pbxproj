@@ -14,6 +14,7 @@
 		FC006BB31F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
 		FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */; };
 		FC006BB61F1B663100218198 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC006BB51F1B663100218198 /* AVFoundation.framework */; };
+		FC030CDE1F3AE2BF00C09504 /* BDPAlertUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = FC030CDD1F3AE2BF00C09504 /* BDPAlertUtils.m */; };
 		FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC81EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
 		FC07EBC91EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */; };
@@ -56,6 +57,9 @@
 		FCD70F5B1EA0AB4B0061F8A8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD70F591EA0AB4B0061F8A8 /* LaunchScreen.storyboard */; };
 		FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F651EA0AB4C0061F8A8 /* birdplanOCTests.m */; };
 		FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */; };
+		FCEC6C0B1F376B50007CBC4F /* BDPSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEC6C0A1F376B50007CBC4F /* BDPSingletonClass.m */; };
+		FCEC6C0C1F376B50007CBC4F /* BDPSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEC6C0A1F376B50007CBC4F /* BDPSingletonClass.m */; };
+		FCEC6C0D1F376B50007CBC4F /* BDPSingletonClass.m in Sources */ = {isa = PBXBuildFile; fileRef = FCEC6C0A1F376B50007CBC4F /* BDPSingletonClass.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +91,9 @@
 		FC006BB01F1B659F00218198 /* BDPQRCodeScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPQRCodeScannerViewController.h; path = UI/purcode/2_qrcodeScan/BDPQRCodeScannerViewController.h; sourceTree = "<group>"; };
 		FC006BB11F1B659F00218198 /* BDPQRCodeScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPQRCodeScannerViewController.m; path = UI/purcode/2_qrcodeScan/BDPQRCodeScannerViewController.m; sourceTree = "<group>"; };
 		FC006BB51F1B663100218198 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FC030CDA1F3ADAAA00C09504 /* BDPSystemConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSystemConstants.h; sourceTree = "<group>"; };
+		FC030CDC1F3AE2BF00C09504 /* BDPAlertUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPAlertUtils.h; sourceTree = "<group>"; };
+		FC030CDD1F3AE2BF00C09504 /* BDPAlertUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPAlertUtils.m; sourceTree = "<group>"; };
 		FC07EBC51EB9F5D400EFF9C7 /* BDPMainTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainTabViewController.h; path = MainContent/BDPMainTabViewController.h; sourceTree = "<group>"; };
 		FC07EBC61EB9F5D400EFF9C7 /* BDPMainTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainTabViewController.m; path = MainContent/BDPMainTabViewController.m; sourceTree = "<group>"; };
 		FC07EBCB1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPMainCollectionViewCell.h; path = MainContent/BDPMainCollectionViewCell.h; sourceTree = "<group>"; };
@@ -141,6 +148,10 @@
 		FCD70F701EA0AB4C0061F8A8 /* birdplanOCUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = birdplanOCUITests.m; sourceTree = "<group>"; };
 		FCD70F721EA0AB4C0061F8A8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCEC6C081F3768A9007CBC4F /* BDPClassConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPClassConstants.h; sourceTree = "<group>"; };
+		FCEC6C091F376B50007CBC4F /* BDPSingletonClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPSingletonClass.h; sourceTree = "<group>"; };
+		FCEC6C0A1F376B50007CBC4F /* BDPSingletonClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDPSingletonClass.m; sourceTree = "<group>"; };
+		FCEC6C0E1F376BAB007CBC4F /* BDPImageConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPImageConstants.h; sourceTree = "<group>"; };
+		FCEC6C201F376C96007CBC4F /* BDPLogConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDPLogConstants.h; sourceTree = "<group>"; };
 		FFC3D82236BB58FA0F0400D3 /* Pods-birdplanOCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-birdplanOCTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-birdplanOCTests/Pods-birdplanOCTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -206,6 +217,15 @@
 			name = "2_qrcodeScanner(扫描二维码)";
 			sourceTree = "<group>";
 		};
+		FC030CDB1F3AE2BF00C09504 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				FC030CDC1F3AE2BF00C09504 /* BDPAlertUtils.h */,
+				FC030CDD1F3AE2BF00C09504 /* BDPAlertUtils.m */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		FC07EBCA1EB9F65B00EFF9C7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,13 +233,6 @@
 				FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */,
 			);
 			name = Cell;
-			sourceTree = "<group>";
-		};
-		FC07EC121EB9FEDD00EFF9C7 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Utils;
 			sourceTree = "<group>";
 		};
 		FC1371C41EFA6E0600B62FFD /* Lib */ = {
@@ -333,6 +346,9 @@
 				FC8706521F0BCEEC00EF9E0B /* BDPConstants.h */,
 				FC8706531F0BCEEC00EF9E0B /* BDPUIConstants.h */,
 				FCEC6C081F3768A9007CBC4F /* BDPClassConstants.h */,
+				FCEC6C0E1F376BAB007CBC4F /* BDPImageConstants.h */,
+				FCEC6C201F376C96007CBC4F /* BDPLogConstants.h */,
+				FC030CDA1F3ADAAA00C09504 /* BDPSystemConstants.h */,
 			);
 			path = Constants;
 			sourceTree = SOURCE_ROOT;
@@ -349,11 +365,11 @@
 		FCD70F3F1EA0AB4B0061F8A8 = {
 			isa = PBXGroup;
 			children = (
+				FC030CDB1F3AE2BF00C09504 /* Utils */,
 				FC1371C41EFA6E0600B62FFD /* Lib */,
 				FC9C4DB11EF91CDC00123724 /* Model */,
 				FCE2ED741EF161E6003BAC97 /* UI */,
 				FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */,
-				FC07EC121EB9FEDD00EFF9C7 /* Utils */,
 				FC2889F01EA79C6A0061F825 /* MainContent */,
 				FCD70F4A1EA0AB4B0061F8A8 /* birdplanOC */,
 				FCD70F641EA0AB4C0061F8A8 /* birdplanOCTests */,
@@ -386,6 +402,8 @@
 				FCD70F591EA0AB4B0061F8A8 /* LaunchScreen.storyboard */,
 				FCD70F5C1EA0AB4B0061F8A8 /* Info.plist */,
 				FCD70F4B1EA0AB4B0061F8A8 /* Supporting Files */,
+				FCEC6C091F376B50007CBC4F /* BDPSingletonClass.h */,
+				FCEC6C0A1F376B50007CBC4F /* BDPSingletonClass.m */,
 			);
 			path = birdplanOC;
 			sourceTree = "<group>";
@@ -514,7 +532,7 @@
 				TargetAttributes = {
 					FCD70F471EA0AB4B0061F8A8 = {
 						CreatedOnToolsVersion = 8.3.1;
-						DevelopmentTeam = 48LYG8Q6YA;
+						DevelopmentTeam = 25X2DD87R3;
 						ProvisioningStyle = Automatic;
 					};
 					FCD70F601EA0AB4C0061F8A8 = {
@@ -723,12 +741,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC8706581F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m in Sources */,
+				FCEC6C0B1F376B50007CBC4F /* BDPSingletonClass.m in Sources */,
 				FC4905DA1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 				FC07EBCD1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */,
 				FC07EBC71EB9F5D400EFF9C7 /* BDPMainTabViewController.m in Sources */,
 				FC6922961F028E1D001B1B37 /* BDPDrawerViewController.m in Sources */,
 				FCD70F531EA0AB4B0061F8A8 /* ViewController.m in Sources */,
 				FC8706551F0BCEEC00EF9E0B /* UIImage+BDPHelper.m in Sources */,
+				FC030CDE1F3AE2BF00C09504 /* BDPAlertUtils.m in Sources */,
 				FC69229C1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC8706571F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m in Sources */,
 				FC006BB21F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
@@ -757,6 +777,7 @@
 				FC69229D1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
+				FCEC6C0C1F376B50007CBC4F /* BDPSingletonClass.m in Sources */,
 				FC006BB31F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 			);
@@ -775,6 +796,7 @@
 				FC69229E1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
+				FCEC6C0D1F376B50007CBC4F /* BDPSingletonClass.m in Sources */,
 				FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 			);
@@ -910,14 +932,16 @@
 			baseConfigurationReference = 403C36A0D3A38FBBC523C344 /* Pods-birdplanOC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 48LYG8Q6YA;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 25X2DD87R3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/pch/PrefixHeader.pch";
 				INFOPLIST_FILE = birdplanOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -926,14 +950,16 @@
 			baseConfigurationReference = 5DDB0175DABE0F55ED77B78A /* Pods-birdplanOC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 48LYG8Q6YA;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 25X2DD87R3;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/pch/PrefixHeader.pch";
 				INFOPLIST_FILE = birdplanOC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanOC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zhoushijie.birdplanoc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

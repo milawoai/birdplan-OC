@@ -142,8 +142,10 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 #pragma mark ---- UI init
 
 - (void) createUI {
+    
     [self createCycleScrollView];
     [self createCollectionView];
+    [self setNavBar];
     [self setUI];
 }
 
@@ -182,6 +184,9 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     }
 }
 
+-(void) setNavBar {
+    self.title = @"首页";
+}
 -(void) setUI {
     self.view.backgroundColor = bdp_color_white;
 }

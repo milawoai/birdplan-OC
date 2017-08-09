@@ -11,8 +11,10 @@
 
 #import "BDPUIConstants.h"
 #import "BDPColorConstants.h"
+#import "BDPLogConstants.h"
+#import "BDPClassConstants.h"
+#import "BDPImageConstants.h"
+#import "BDPSystemConstants.h"
 
-#define WEAKSELF typeof(self) __weak weakSelf = self;
-#define BDPNotificationCenter [NSNotificationCenter defaultCenter]
 
 #endif /* BDPConstants_h */

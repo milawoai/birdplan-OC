@@ -82,7 +82,7 @@ static NSString * const BDPDrawCenterViewControllerReuseIdentifier = @"BDPDrawCe
         self.datas = [[NSMutableArray alloc] init];
     }
     
-    //         --- 模拟加载延迟
+    //--- 模拟加载延迟
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         for (int i = 0; i< 10; i++) {
             [self.datas addObject:[NSString stringWithFormat:@"test_%d",i]];

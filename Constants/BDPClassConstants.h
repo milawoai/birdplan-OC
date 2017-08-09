@@ -9,6 +9,9 @@
 #ifndef BDPClassConstants_h
 #define BDPClassConstants_h
 
+// 获取weak类
+#define WEAKSELF typeof(self) __weak weakSelf = self;
+
 //单例化一个类
 #define SYNTHESIZE_SINGLETON_FOR_CLASS(classname) \
 \
