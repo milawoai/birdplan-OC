@@ -79,10 +79,39 @@
     [self loadFillView:rightFillView];
 }
 
-- (void)createScanContainerView:(CGFloat)blockSize marginTop:(CGFloat)marginTop bottomHeight:(CGFloat)bottomHeight{
+- (void)createScanContainerView:(CGFloat)blockSize marginTop:(CGFloat)marginTop bottomHeight:(CGFloat)bottomHeight {
     UIView * scanView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - blockSize) / 2, marginTop, blockSize, blockSize)];
     [scanView setBackgroundColor:[UIColor clearColor]];
+    [self setFourCornerLayer:scanView borderLength:30.f borderWidth:5.f];
     [self.view addSubview:scanView];
+}
+
+- (void)setFourCornerLayer:(UIView *) scanView borderLength:(CGFloat)borderLength borderWidth:(CGFloat)borderWidth{
+    if (!scanView) return;
+  
+    //左上角
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(0, 0, borderLength, borderWidth)]];
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(0, 0, borderWidth, borderLength)]];
+    
+    //右上角
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(scanView.frame.size.width - borderLength, 0, borderLength, borderWidth)]];
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(scanView.frame.size.width -borderWidth, 0, borderWidth, borderLength)]];
+    
+    //左下角
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(0, scanView.frame.size.height - borderLength, borderWidth, borderLength)]];
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(0, scanView.frame.size.height - borderWidth, borderLength, borderWidth)]];
+    
+    //右下角
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(scanView.frame.size.width - borderWidth, scanView.frame.size.height - borderLength, borderWidth, borderLength)]];
+    [scanView.layer addSublayer:[self setBorderLayer:CGRectMake(scanView.frame.size.width - borderLength, scanView.frame.size.height - borderWidth, borderLength, borderWidth)]];
+}
+
+- (CALayer *)setBorderLayer:(CGRect)frame {
+    CALayer *border = [CALayer layer];
+    UIColor *borderColor = [UIColor UIColorFromHex:0x34DA5B];
+    border.backgroundColor = borderColor.CGColor;
+    border.frame = frame;
+    return border;
 }
 
 - (void)loadFillView:(UIView *)fillView {
