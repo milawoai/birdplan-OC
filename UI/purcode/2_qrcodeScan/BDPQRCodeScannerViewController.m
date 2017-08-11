@@ -9,6 +9,8 @@
 // 参考
 // iOS高仿微信二维码扫描 http://www.jianshu.com/p/0585332edff6
 // iOS那些简单的动画 http://www.jianshu.com/p/a098f6e3617f
+// iOS 手势 http://www.cocoachina.com/ios/20130501/6108.html
+// iOS开发--AVFoundation自定义相机 http://www.jianshu.com/p/5860087c8981
 
 #import "BDPQRCodeScannerViewController.h"
 #import "BDPAlertUtils.h"
@@ -18,7 +20,7 @@
 #define defaultScanViewSize 300.f
 #define defaultScanViewMarginTop 183.f
 
-@interface BDPQRCodeScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate>
+@interface BDPQRCodeScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate, UIGestureRecognizerDelegate>
 // 会话
 @property (nonatomic, strong) AVCaptureSession *session;
 // 输入设备
@@ -34,6 +36,7 @@
 @property (assign,nonatomic)CGFloat scanViewMarginTop;
 @property (assign,nonatomic)CGFloat scanViewBottomHeight;
 
+@property (assign,nonatomic)CGFloat initialPinchZoom;
 @end
 
 @implementation BDPQRCodeScannerViewController
@@ -56,6 +59,7 @@
 - (void)setUI {
     [self setNav];
     [self createSubView];
+    [self addPinchGesture];
 }
 
 - (void)setNav {
@@ -73,6 +77,7 @@
     [self createFillView:self.scanViewSize marginTop:self.scanViewMarginTop bottomHeight:self.scanViewBottomHeight];
     [self createScanContainerView:self.scanViewSize marginTop:self.scanViewMarginTop bottomHeight:self.scanViewBottomHeight];
 }
+
 - (void)createFillView:(CGFloat)blockSize marginTop:(CGFloat)marginTop bottomHeight:(CGFloat)bottomHeight {
     UIView *topFillView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - blockSize) / 2, 0, blockSize, marginTop)];
     UIView *bottomFillView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - blockSize) / 2, blockSize + marginTop, blockSize, SCREEN_HEIGHT_NO_NAV - blockSize - marginTop - bottomHeight)];
@@ -87,9 +92,7 @@
 - (void)createScanContainerView:(CGFloat)blockSize marginTop:(CGFloat)marginTop bottomHeight:(CGFloat)bottomHeight {
     UIView * scanView = [[UIView alloc] initWithFrame:CGRectMake((SCREEN_WIDTH - blockSize) / 2, marginTop, blockSize, blockSize)];
     [scanView setBackgroundColor:[UIColor clearColor]];
-    
     [self setFourCornerLayer:scanView borderLength:30.f borderWidth:5.f];
-    
     [self setScanLineView:scanView marginLeft:10.f scanStart:10.f scanEnd:10.f lineHeight:3.f];
     [self.view addSubview:scanView];
 }
@@ -111,7 +114,6 @@
 - (void)setScanLineAnimation:(UIView *)scanLineView scanHeight:(CGFloat)scanHeight{
     if (!scanLineView) return;
     
-    DLog(@"%f %f",scanLineView.layer.position.x ,scanLineView.layer.position.y);
     CABasicAnimation *animation =[CABasicAnimation animationWithKeyPath:@"position"];
     animation.fromValue = [NSValue valueWithCGPoint:scanLineView.layer.position];
     CGPoint endPos = CGPointMake(scanLineView.layer.position.x, scanLineView.layer.position.y + scanHeight);
@@ -267,18 +269,41 @@
 
 -(BOOL) checkCameraRight {
     AVAuthorizationStatus authStatus = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    
     if(authStatus == AVAuthorizationStatusRestricted || authStatus == AVAuthorizationStatusDenied){
-        
         [BDPAlertUtils presentAlertWithMessage:@"请在iPhone的“设置”-“隐私”-“相机”功能中，找到“XXXX”打开相机访问权限" ctrl:self];
-    
         return NO;
-        
     } else {
         return YES;
     }
 }
 
+- (void)addPinchGesture {
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(handlePinch:)];
+    [self.view addGestureRecognizer:pinchGestureRecognizer];
+}
+
+- (void) handlePinch:(UIPinchGestureRecognizer*) recognizer {
+    if (!_device) return;
+
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        _initialPinchZoom = _device.videoZoomFactor;
+    }
+    NSError *error = nil;
+    [_device lockForConfiguration:&error];
+    if (!error) {
+        CGFloat zoomFactor;
+        CGFloat scale = recognizer.scale;
+        if (scale < 1.0f) {
+            zoomFactor = _initialPinchZoom - pow(_device.activeFormat.videoMaxZoomFactor, 1.0f - recognizer.scale);
+        } else {
+            zoomFactor = _initialPinchZoom + pow(_device.activeFormat.videoMaxZoomFactor, (recognizer.scale - 1.0f) / 2.0f);
+        }
+        zoomFactor = MIN(30.0f, zoomFactor);
+        zoomFactor = MAX(1.0f, zoomFactor);
+        _device.videoZoomFactor = zoomFactor;
+        [_device unlockForConfiguration];
+    }
+}
 /*
 #pragma mark - Navigation
 

@@ -10,6 +10,15 @@
 
 @implementation BDPHomeLearnData
 
-
+- (id)copyWithZone:(NSZone *)zone {
+    BDPHomeLearnData *homeLearnData = [[[self class] allocWithZone:zone] init];
+    
+    homeLearnData.url = [self.url copy];
+    homeLearnData.title = [self.title copy];
+    homeLearnData.learnID = self.learnID;
+    homeLearnData.className = [self.className copy];
+    homeLearnData.methodName = [self.methodName copy];
+    return homeLearnData;
+}
 
 @end
