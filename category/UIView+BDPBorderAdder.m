@@ -16,6 +16,7 @@
     border.frame = CGRectMake(0, 0, self.frame.size.width, borderWidth);
     [self.layer addSublayer:border];
 }
+
 -(void)addBottomBorderWithColor:(UIColor *)color andWidth:(CGFloat) borderWidth {
     CALayer *border = [CALayer layer];
     border.backgroundColor = color.CGColor;

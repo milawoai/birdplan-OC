@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "BDPMainTabViewController.h"
+#import "NSString+BDPExtend.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    NSString *str = @"  TESTT  ";
+    NSSLog(@"%@",[str trim]);
     
     BDPMainTabViewController *mainController = [[BDPMainTabViewController alloc] init];
     mainController.view.backgroundColor = bdp_color_white;

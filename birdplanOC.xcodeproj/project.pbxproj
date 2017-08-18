@@ -22,6 +22,9 @@
 		FC07EBCD1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
 		FC07EBCE1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
 		FC07EBCF1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */; };
+		FC2F1FE71F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F1FE61F3D96B9008DD99A /* NSString+BDPExtend.m */; };
+		FC2F1FE81F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F1FE61F3D96B9008DD99A /* NSString+BDPExtend.m */; };
+		FC2F1FE91F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */ = {isa = PBXBuildFile; fileRef = FC2F1FE61F3D96B9008DD99A /* NSString+BDPExtend.m */; };
 		FC4905C01EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
 		FC4905C11EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
 		FC4905C21EF6827F00F825AF /* BDPNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */; };
@@ -102,6 +105,8 @@
 		FC07EBCC1EB9F69700EFF9C7 /* BDPMainCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPMainCollectionViewCell.m; path = MainContent/BDPMainCollectionViewCell.m; sourceTree = "<group>"; };
 		FC07EC161EBA005700EFF9C7 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = pch/PrefixHeader.pch; sourceTree = "<group>"; };
 		FC1DE61B1F1F91EB00043867 /* RuleHead.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RuleHead.h; path = Constants/RuleHead.h; sourceTree = SOURCE_ROOT; };
+		FC2F1FE51F3D96B9008DD99A /* NSString+BDPExtend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+BDPExtend.h"; sourceTree = "<group>"; };
+		FC2F1FE61F3D96B9008DD99A /* NSString+BDPExtend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+BDPExtend.m"; sourceTree = "<group>"; };
 		FC4905BE1EF6827F00F825AF /* BDPNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPNavigationViewController.h; path = MainContent/BDPNavigationViewController.h; sourceTree = "<group>"; };
 		FC4905BF1EF6827F00F825AF /* BDPNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BDPNavigationViewController.m; path = MainContent/BDPNavigationViewController.m; sourceTree = "<group>"; };
 		FC4905D81EF77E0200F825AF /* BDPCodeHomePageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BDPCodeHomePageViewController.h; path = MainContent/BDPCodeHomePageViewController.h; sourceTree = "<group>"; };
@@ -339,6 +344,8 @@
 				FC87064D1F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m */,
 				FC87064E1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.h */,
 				FC87064F1F0BCEEC00EF9E0B /* UIViewController+BDPNavSetting.m */,
+				FC2F1FE51F3D96B9008DD99A /* NSString+BDPExtend.h */,
+				FC2F1FE61F3D96B9008DD99A /* NSString+BDPExtend.m */,
 			);
 			path = Category;
 			sourceTree = SOURCE_ROOT;
@@ -756,6 +763,7 @@
 				FC69229C1F036289001B1B37 /* BDPLeftDrawController.m in Sources */,
 				FC8706571F0BCEEC00EF9E0B /* UIView+BDPBorderAdder.m in Sources */,
 				FC006BB21F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
+				FC2F1FE71F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */,
 				FCD70F501EA0AB4B0061F8A8 /* AppDelegate.m in Sources */,
 				FC9C4DB41EF91E0700123724 /* BDPHomeLearnData.m in Sources */,
 				FC6922A81F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
@@ -782,6 +790,7 @@
 				FC6922A91F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F661EA0AB4C0061F8A8 /* birdplanOCTests.m in Sources */,
 				FCEC6C0C1F376B50007CBC4F /* BDPSingletonClass.m in Sources */,
+				FC2F1FE81F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */,
 				FC006BB31F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DB1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 			);
@@ -801,6 +810,7 @@
 				FC6922AA1F03C6AF001B1B37 /* BDPDrawCenterViewController.m in Sources */,
 				FCD70F711EA0AB4C0061F8A8 /* birdplanOCUITests.m in Sources */,
 				FCEC6C0D1F376B50007CBC4F /* BDPSingletonClass.m in Sources */,
+				FC2F1FE91F3D96B9008DD99A /* NSString+BDPExtend.m in Sources */,
 				FC006BB41F1B659F00218198 /* BDPQRCodeScannerViewController.m in Sources */,
 				FC4905DC1EF77E0200F825AF /* BDPCodeHomePageViewController.m in Sources */,
 			);

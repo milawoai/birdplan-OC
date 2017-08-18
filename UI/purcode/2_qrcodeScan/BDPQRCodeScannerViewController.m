@@ -21,6 +21,9 @@
 #define defaultScanViewMarginTop 183.f
 
 @interface BDPQRCodeScannerViewController ()<AVCaptureMetadataOutputObjectsDelegate, UIGestureRecognizerDelegate>
+{
+    dispatch_queue_t sessionQueue;
+}
 // 会话
 @property (nonatomic, strong) AVCaptureSession *session;
 // 输入设备
@@ -40,6 +43,15 @@
 @end
 
 @implementation BDPQRCodeScannerViewController
+
+
+- (instancetype) init {
+    self = [super init];
+    if (self) {
+        sessionQueue = dispatch_queue_create("com.birdPlanOC.QRCode", NULL);
+    }
+    return self;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -259,6 +271,7 @@
         //停止扫描
         [_session stopRunning];
         AVMetadataMachineReadableCodeObject * metadataObject = [metadataObjects objectAtIndex:0];
+         if (![metadataObject isKindOfClass:[AVMetadataMachineReadableCodeObject class]]) return;
         if (metadataObject) {
             stringValue = metadataObject.stringValue;
             UIAlertView *alert =[[UIAlertView alloc] initWithTitle:@"二维码地址" message:stringValue delegate:nil cancelButtonTitle:@"确定" otherButtonTitles: nil];
@@ -284,24 +297,34 @@
 
 - (void) handlePinch:(UIPinchGestureRecognizer*) recognizer {
     if (!_device) return;
-
-    if (recognizer.state == UIGestureRecognizerStateBegan) {
-        _initialPinchZoom = _device.videoZoomFactor;
-    }
-    NSError *error = nil;
-    [_device lockForConfiguration:&error];
-    if (!error) {
-        CGFloat zoomFactor;
-        CGFloat scale = recognizer.scale;
-        if (scale < 1.0f) {
-            zoomFactor = _initialPinchZoom - pow(_device.activeFormat.videoMaxZoomFactor, 1.0f - recognizer.scale);
-        } else {
-            zoomFactor = _initialPinchZoom + pow(_device.activeFormat.videoMaxZoomFactor, (recognizer.scale - 1.0f) / 2.0f);
+    
+    switch (recognizer.state) {
+        case UIGestureRecognizerStateBegan: {
+           _initialPinchZoom = _device.videoZoomFactor;
+           NSSLog(@"zoom begin:%.3f", _initialPinchZoom);
         }
-        zoomFactor = MIN(30.0f, zoomFactor);
-        zoomFactor = MAX(1.0f, zoomFactor);
-        _device.videoZoomFactor = zoomFactor;
-        [_device unlockForConfiguration];
+            break;
+        case UIGestureRecognizerStateChanged: {
+            CGFloat zoomTo = _initialPinchZoom + (recognizer.scale * 2 - 2);
+            // step 0.01 between 1.0 and zoomMax (4x on iPhone 6s)
+            int msc = (int)(((zoomTo+0.001)*100))%100;
+            zoomTo = (NSInteger)zoomTo + msc * 0.01;
+            zoomTo = fmaxf(1, fminf(zoomTo, _device.activeFormat.videoMaxZoomFactor));
+            
+            if ( _device.videoZoomFactor != zoomTo ) {
+                dispatch_async(sessionQueue, ^{
+                    NSError *error;
+                    if ( YES == [_device lockForConfiguration:&error] ){
+                        _device.videoZoomFactor = zoomTo;
+                        [_device unlockForConfiguration];
+                        NSSLog(@"zoom changed:%.3f", zoomTo);
+                    }
+                });
+            }
+        }
+            break;
+        default:
+            break;
     }
 }
 /*
