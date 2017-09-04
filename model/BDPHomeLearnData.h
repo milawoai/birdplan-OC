@@ -14,4 +14,5 @@
 @property (nonatomic, assign) NSInteger learnID;
 @property (nonatomic, copy) NSString *className;
 @property (nonatomic, copy) NSString *methodName;
+@property (nonatomic, copy) NSString *animationName;
 @end

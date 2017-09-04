@@ -15,7 +15,8 @@
 #import "UIView+BDPBorderAdder.h"
 
 #import "BDPHomeLearnData.h"
-
+//转场动画
+#import "HUTransitionAnimator.h"
 
 #define default_colNumber 3
 #define default_totalNumber 12
@@ -34,8 +35,7 @@
 
 static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
-@interface BDPCodeHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,SDCycleScrollViewDelegate>
-
+@interface BDPCodeHomePageViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,SDCycleScrollViewDelegate,UINavigationControllerDelegate>
 @property (assign,nonatomic) NSInteger colNumber;
 @property (assign,nonatomic) NSInteger cellWidth;
 @property (assign,nonatomic) NSInteger cellHeight;
@@ -53,6 +53,9 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 @property (assign, nonatomic) NSInteger totallNumber;
 
 @property (strong, nonatomic) NSMutableArray<BDPHomeLearnData*> *datas;
+
+@property (strong, nonatomic) NSString* transitionClassName;
+@property (nonatomic, strong) id animator;
 @end
 
 @implementation BDPCodeHomePageViewController
@@ -127,10 +130,26 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     [super viewDidLoad];
     [self setFakeData];
     [self createUI];
+    
+    // self.navigationController.delegate = self;
     // Do any additional setup after loading the view.
 }
 
-
+//- (void)viewWillAppear:(BOOL)animated{
+//    [self.selectedViewController beginAppearanceTransition: YES animated: animated];
+//}
+//
+//- (void) viewDidAppear:(BOOL)animated {
+//    [self.selectedViewController endAppearanceTransition];
+//}
+//
+//- (void) viewWillDisappear:(BOOL)animated {
+//    [self.selectedViewController beginAppearanceTransition: NO animated: animated];
+//}
+//
+//- (void) viewDidDisappear:(BOOL)animated {
+//    [self.selectedViewController endAppearanceTransition];
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -193,21 +212,18 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 
 #pragma mark ---- UICollectionViewDataSource
 
-- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView
-{
+- (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
     return 1;
 }
 
 
-- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
-{
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     return self.datas.count;
     // return _collectionInfos.count;
 }
 
 
-- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     BDPMainCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:reuseIdentifier forIndexPath:indexPath];
     // Configure the cell
     [cell addTopBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
@@ -225,63 +241,49 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         [cell addBottomBorderWithColor:[UIColor darkGrayColor] andWidth:0.3];
     }
     [cell setUI];
-//    if (_collectionInfos && _collectionInfos.count > 0) {
-//        SDHZShareCollectionInfo *info = _collectionInfos[indexPath.row];
-//        [cell setCollectionCellWithLabelName:[self getLabelNameByFlag:info.shareFlag] imageName:[self getImageNameByFlag:info.shareFlag]];
-//    }
-    //cell.backgroundColor = [UIColor whiteColor];
-    
     return cell;
 }
 
 
-- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
 
-- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath*)destinationIndexPath {
     
 }
 
 #pragma mark ---- UICollectionViewDelegateFlowLayout
 
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
     return (CGSize){_cellWidth,_cellHeight};
 }
 
 
-- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
-{
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
     return _edgeInsets;
 }
 
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumLineSpacingForSectionAtIndex:(NSInteger)section {
     return _itemSpacing;
 }
 
 
-- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section
-{
+- (CGFloat)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout minimumInteritemSpacingForSectionAtIndex:(NSInteger)section {
     return _lineSpacing;
 }
 
 
 #pragma mark ---- UICollectionViewDelegate
 
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
     return YES;
 }
 
 // 选中某item
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSInteger index = indexPath.row;
     BDPHomeLearnData *cellLearnData = (BDPHomeLearnData *)[self.datas objectAtIndex:index];
     if (cellLearnData && cellLearnData.className) {
@@ -289,8 +291,10 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         if ([clzz isSubclassOfClass: [UIViewController class]]) {
             UIViewController * ctrl = [[clzz alloc] init];
             [ctrl setHidesBottomBarWhenPushed:YES];
-            // [self presentViewController:ctrl animated:true completion:nil];
+            self.transitionClassName = cellLearnData.animationName;
             [self.navigationController pushViewController:ctrl animated:YES];
+            
+            // [self presentViewController:ctrl animated:true completion:nil];
         }
     } else {
         BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
@@ -299,6 +303,40 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     }
     
 }
+
+#pragma mark - SDCycleScrollViewDelegate
+
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
+    NSLog(@"---点击了第%ld张图片", (long)index);
+    BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
+    [ctrl setHidesBottomBarWhenPushed:YES];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+// =============================================================================
+#pragma mark - UINavigationControllerDelegate
+
+//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+//    self.animator = nil;
+//    if (NSClassFromString(self.transitionClassName)) {
+//        Class aClass = NSClassFromString(self.transitionClassName);
+//        self.animator = [[aClass alloc] init];
+//    }
+//    if (self.animator) {
+//        [self setupAnimatorForOperation:operation];
+//    }
+//    return self.animator;
+//}
+//
+//- (void)setupAnimatorForOperation:(UINavigationControllerOperation)operation {
+//    // HUAnimator
+//    // DMCustomTransitions
+//    if ([self.animator isKindOfClass:[HUTransitionAnimator class]]) {
+//        [self.animator setPresenting:(operation == UINavigationControllerOperationPush)];
+//    }
+//}
+
+#pragma mark - private function
 
 - (void)setFakeData {
     if (!_datas) {
@@ -316,21 +354,10 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         } else {
             obj.className = @"BDPTestViewController";
         }
+        obj.animationName = @"hello";
         [_datas addObject:obj];
     }
 }
 
-#pragma mark - SDCycleScrollViewDelegate
-
-- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
-    NSLog(@"---点击了第%ld张图片", (long)index);
-    BDPTestViewController *ctrl = [[BDPTestViewController alloc] init];
-    [ctrl setHidesBottomBarWhenPushed:YES];
-    [self.navigationController pushViewController:ctrl animated:YES];
-}
-
-//- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didScrollToIndex:(NSInteger)index {
-//    NSLog(@">>>>>> 滚动到第%ld张图", (long)index);
-//}
 
 @end

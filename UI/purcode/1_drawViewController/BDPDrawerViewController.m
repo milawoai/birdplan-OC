@@ -10,7 +10,7 @@
 #import "BDPDrawCenterViewController.h"
 #import "BDPLeftDrawController.h"
 #import "BDPNavigationViewController.h"
-#import "UIViewController+BDPNavSetting.h"
+#import "UIViewController+BDPExtend.h"
 
 @interface BDPDrawerViewController ()
 @property (nonatomic, strong) UIButton *rightNavBtn;

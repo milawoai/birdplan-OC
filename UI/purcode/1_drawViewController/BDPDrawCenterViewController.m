@@ -8,7 +8,7 @@
 
 #import "BDPDrawCenterViewController.h"
 #import "BDPDrawerViewController.h"
-#import "UIViewController+BDPNavSetting.h"
+#import "UIViewController+BDPExtend.h"
 
 @interface BDPDrawCenterViewController ()<UITableViewDelegate, UITableViewDataSource,UIGestureRecognizerDelegate>
 @property (nonatomic, strong) UITableView *tableView;
@@ -28,11 +28,6 @@ static NSString * const BDPDrawCenterViewControllerReuseIdentifier = @"BDPDrawCe
     
     self.navigationController.interactivePopGestureRecognizer.delegate = self;
     self.navigationController.interactivePopGestureRecognizer.enabled = YES;
-    
-   
-    
-    // self.view.backgroundColor = bdp_color_black;
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {

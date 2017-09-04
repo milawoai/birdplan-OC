@@ -11,4 +11,5 @@
 @interface NSString (BDPExtend)
 
 - (NSString *)trim;
+- (NSString *)replaceSubString: (NSString *)subString with: (NSString *)newString;
 @end

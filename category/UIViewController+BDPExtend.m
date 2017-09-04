@@ -6,10 +6,9 @@
 //  Copyright © 2017年 zhoushijie. All rights reserved.
 //
 
-#import "UIViewController+BDPNavSetting.h"
+#import "UIViewController+BDPExtend.h"
 
 @implementation UIViewController (checkPresent)
-
 - (BOOL)isPresent {
     return self.navigationController.topViewController != self;
 }

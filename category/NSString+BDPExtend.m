@@ -17,4 +17,8 @@
     return resultStr;
 }
 
+- (NSString *)replaceSubString: (NSString *)subString with: (NSString *)newString {
+   return [self stringByReplacingOccurrencesOfString:subString withString:newString];
+}
+
 @end

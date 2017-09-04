@@ -11,6 +11,7 @@ target 'birdplanOC' do
   pod 'SDCycleScrollView'
   pod 'SDWebImage'
   pod 'MMDrawerController'
+  pod 'YYModel'
   
   target 'birdplanOCTests' do
     inherit! :search_paths
