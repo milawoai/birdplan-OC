@@ -58,10 +58,27 @@ static BDPMainTabViewController *shared = nil;
     [self setUI];
 }
 
+//- (void) viewDidAppear:(BOOL)animated {
+//    [super viewDidAppear:animated];
+//    [self.selectedViewController endAppearanceTransition];
+//}
+//
+//- (void) viewWillDisappear:(BOOL)animated {
+//    [super viewWillDisappear:animated];
+//    [self.selectedViewController beginAppearanceTransition: NO animated: animated];
+//}
+////
+//- (void) viewDidDisappear:(BOOL)animated {
+//    [super viewDidDisappear:animated];
+//    [self.selectedViewController endAppearanceTransition];
+//}
+
 - (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
     if (_isGenMidBigTab) {
        [self addCenterButtonWithImage:[UIImage imageNamed:@"hood"] highlightImage:[UIImage imageNamed:@"hood-selected"] target:self action:@selector(centerButtonPressed:) asNormalTabbar:_isGenMidBigTab];
     }
+    // [self.selectedViewController beginAppearanceTransition: YES animated: animated];
 }
 
 - (void)didReceiveMemoryWarning {

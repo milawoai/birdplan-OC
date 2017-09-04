@@ -8,8 +8,6 @@
 
 #import "HUTransitionVerticalLinesAnimator.h"
 
-
-
 @implementation HUTransitionVerticalLinesAnimator
 
 #define VLANIMATION_TIME1 0.01

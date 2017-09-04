@@ -131,25 +131,9 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
     [self setFakeData];
     [self createUI];
     
-    // self.navigationController.delegate = self;
+    self.navigationController.delegate = self;
     // Do any additional setup after loading the view.
 }
-
-//- (void)viewWillAppear:(BOOL)animated{
-//    [self.selectedViewController beginAppearanceTransition: YES animated: animated];
-//}
-//
-//- (void) viewDidAppear:(BOOL)animated {
-//    [self.selectedViewController endAppearanceTransition];
-//}
-//
-//- (void) viewWillDisappear:(BOOL)animated {
-//    [self.selectedViewController beginAppearanceTransition: NO animated: animated];
-//}
-//
-//- (void) viewDidDisappear:(BOOL)animated {
-//    [self.selectedViewController endAppearanceTransition];
-//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -316,25 +300,25 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
 // =============================================================================
 #pragma mark - UINavigationControllerDelegate
 
-//- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
-//    self.animator = nil;
-//    if (NSClassFromString(self.transitionClassName)) {
-//        Class aClass = NSClassFromString(self.transitionClassName);
-//        self.animator = [[aClass alloc] init];
-//    }
-//    if (self.animator) {
-//        [self setupAnimatorForOperation:operation];
-//    }
-//    return self.animator;
-//}
-//
-//- (void)setupAnimatorForOperation:(UINavigationControllerOperation)operation {
-//    // HUAnimator
-//    // DMCustomTransitions
-//    if ([self.animator isKindOfClass:[HUTransitionAnimator class]]) {
-//        [self.animator setPresenting:(operation == UINavigationControllerOperationPush)];
-//    }
-//}
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC {
+    self.animator = nil;
+    if (NSClassFromString(self.transitionClassName)) {
+        Class aClass = NSClassFromString(self.transitionClassName);
+        self.animator = [[aClass alloc] init];
+    }
+    if (self.animator) {
+        [self setupAnimatorForOperation:operation];
+    }
+    return self.animator;
+}
+
+- (void)setupAnimatorForOperation:(UINavigationControllerOperation)operation {
+    // HUAnimator
+    // DMCustomTransitions
+    if ([self.animator isKindOfClass:[HUTransitionAnimator class]]) {
+        [self.animator setPresenting:(operation == UINavigationControllerOperationPush)];
+    }
+}
 
 #pragma mark - private function
 
@@ -349,12 +333,14 @@ static NSString * const reuseIdentifier = @"BDPMainCollectionViewCell";
         obj.title = [NSString stringWithFormat:@"第%d课",i+1];
         if (i == 0 ) {
             obj.className = @"BDPDrawerViewController";
+            obj.animationName = @"HUTransitionVerticalLinesAnimator";
         } else if (i == 1) {
             obj.className = @"BDPQRCodeScannerViewController";
+            obj.animationName = @"HUTransitionHorizontalLinesAnimator";
         } else {
             obj.className = @"BDPTestViewController";
+            obj.animationName = @"hello";
         }
-        obj.animationName = @"hello";
         [_datas addObject:obj];
     }
 }
